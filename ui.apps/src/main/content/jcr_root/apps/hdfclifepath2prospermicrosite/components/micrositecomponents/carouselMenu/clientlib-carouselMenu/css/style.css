@@ -1,0 +1,87 @@
+.cm-swiper-container {
+  font-family: "poppins-regular";
+  position: fixed;
+  max-width: 1600px;
+  width: 100%;
+  display: none;
+  z-index: 11;
+  background: white;
+  border-bottom: 1px solid lightgray;
+}
+
+.cm-swiper {
+  width: 95%;
+  height: 55px;
+  background: white;
+  border-bottom: 1px solid lightgray;
+}
+
+.cm-swiper-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 35px;
+  height: 50px !important;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.cm-swiper-slide a {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cm-swiper-slide-anchor {
+  text-decoration: none;
+  font-family: "poppins-semibold";
+  display: inline-block;
+  padding: 5px 0px;
+  position: relative;
+  cursor: pointer;
+}
+
+.cm-swiper-slide-anchor:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: red;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.cm-swiper-slide a :active {
+  color: #ed1c24;
+}
+
+.cm-swiper-slide-anchor:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.cm-swiper-slide-anchor.cm-active:hover:after {
+  width: 0;
+}
+
+.cm-swiper-slide-anchor.cm-active:after {
+  width: 0;
+  left: 50%;
+  transition: none;
+}
+
+.cm-swiper-wrapper {
+  transition-duration: 500ms !important;
+}
+
+.cm-swiper-slide a.cm-active {
+  color: red;
+  border-bottom: 2px solid red;
+}
+
+@media (max-width: 1024px) {
+  .cm-swiper-container {
+    display: none !important;
+  }
+}

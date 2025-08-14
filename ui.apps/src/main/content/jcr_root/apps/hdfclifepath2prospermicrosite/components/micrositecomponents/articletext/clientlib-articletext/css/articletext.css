@@ -1,0 +1,64 @@
+.articletext .articletext-con {
+  display: flex;
+  padding: 0 50px;
+  font-family: "poppins-regular";
+  gap: 3%;
+}
+.articletext .articletext-margin {
+  padding-top: 45px;
+}
+.articletext .article-title-con {
+  width: 20%;
+  font-family: "poppins-semibold";
+  color: #000000;
+  position: relative;
+  bottom: 5px;
+}
+.articletext .article-description-con {
+  width: 80%;
+  font-family: "poppins-regular";
+  line-height: 32px;
+}
+.articletext .serialno-con * {
+  line-height: 48px;
+  margin-top: 3px;
+  font-family: "poppins-semibold";
+}
+@media (max-width: 769px) {
+  .articletext .articletext-con {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .articletext .articletext-margin {
+    margin-top: 45px;
+  }
+  .articletext .article-title-con {
+    display: flex;
+    width: 100%;
+    font-family: "poppins-semibold";
+    color: #000000;
+  }
+  .articletext .article-description-con {
+    width: 100%;
+    font-family: "poppins-regular";
+    line-height: 24px;
+  }
+  .articletext .serialno-con * {
+    line-height: 26px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .articletext .articletext-con {
+    display: flex;
+    flex-direction: row;
+  }
+  .articletext .article-title-con {
+    width: 20%;
+    color: #000000;
+    font-family: "poppins-semibold";
+  }
+  .articletext .article-description-con {
+    width: 70%;
+  }
+}

@@ -1,0 +1,160 @@
+.ss-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding:35px 50px 0px;
+}
+ 
+.ss-icon-group a {
+    display: inline-block;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    cursor:pointer;
+
+ 
+}
+ 
+.ss-icon-group a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ 
+}
+ 
+.ss-icon-group a:last-child {
+    margin-right: 0;
+ 
+}
+
+.ss-icon img {
+    margin: 0px 5px;
+    display:flex;
+    align-items: center;
+    width:15px;
+}
+ 
+.ss-date-section {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    border-right: 1px solid black;
+    border: 1px solid black;
+}
+ 
+.ss-share-text{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-right:0;
+    border-left:0;
+    height: 30px;
+    text-align: center;
+    padding: 0px 20px 0px 10px;
+}
+ 
+.ss-date-text{
+    margin-right: 10px;
+    font-size:14px;
+}
+ 
+.ss-icon-group{
+    display: flex;
+    position:relative;
+    align-items: center;
+    box-sizing: border-box;
+    height: 30px;
+}
+ 
+.ss-icon-group .social-share-img {
+    width: 100%; 
+
+ 
+}
+
+.ss-copy-icon{
+    position: absolute;
+    display:none;
+    bottom: 30px;
+    right: 90px;
+    padding: 4px;
+    font-style: italic;
+    font-size: 12px;
+    cursor: pointer;
+    width:60%;
+
+}
+
+.ss-copied-icon{
+    position: absolute;
+    display:none;
+    bottom: 30px;
+    right: 90px;
+    padding: 4px;
+    font-style: italic;
+    font-size: 12px;
+    cursor: pointer;
+    width:60%;
+
+}
+
+
+
+.cmp-link__screen-reader-only {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+.ss-date-text{
+     margin-right: 6px;
+     font-size:12px! important;
+}
+.ss-share-text {
+ 
+    display:none;
+}
+ 
+.ss-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 35px 20px 0px;
+ 
+}
+ 
+.ss-date-section {
+ 
+    border-right: none;
+ 
+}
+ 
+.ss-icon img {
+margin: 0px 5px 0px 5px;
+width: 45%;
+}
+ 
+.ss-icon{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+}
+
+@media (max-width: 338px){
+.ss-container {
+
+        width: 100%;
+        padding: 35px 20px 0px;
+    }
+        .ss-icon img {
+        margin: 0px 2px 0px 2px;
+        width: 55%;
+    }
+        .ss-date-text {
+        margin-right: 3px;
+        font-size: 11px ! important;
+    }
+
+}

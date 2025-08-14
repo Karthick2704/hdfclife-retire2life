@@ -1,0 +1,44 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<section id="${properties.sectionName}">
+  <div>
+    <div id="mf-imagePlain" class="${properties.isMarginTop ? 'p2p-margin-top' : ''}" data-sly-test="${properties.imageOption == 'imagePlain'}">
+      <picture>
+        <img src="${properties.image}" alt="${properties.imageAltText}" id="mf-desktop-image" />
+        <img src="${properties.mobileImage}" alt="${properties.imageAltText}" id="mf-mobile-image" />
+      </picture>
+    </div>
+
+    <div id="mf-imageCarousel" data-sly-test="${properties.imageOption == 'imageCarousel'}">
+      <div id="mf-desktop-image-carousel" class="${properties.isMarginTop ? 'p2p-margin-top' : ''}">
+        <picture>
+          <img src="${properties.imageCarousel}" alt="${properties.imageCarouselAltText}" id="mf-desktop-image" />
+        </picture>
+      </div>
+      <div id="mf-mobile-image-carousel" class="${properties.isMarginTop ? 'p2p-margin-top' : ''}">
+        <div class="swiper mf-swiper">
+          <div class="swiper-wrapper mf-swiper-wrapper">
+            <sly data-sly-list.tabName="${resource.children}">
+              <sly data-sly-test="${tabName.name=='imageCarouselMultifield'}">
+                <sly data-sly-list.tabchild="${tabName.children}">
+                  <div class="swiper-slide mf-swiper-slide">
+                    <picture>
+                      <img src="${tabchild.mobileImageCarousel}" alt="${tabchild.mobileImageCarouselAltTxt}" />
+                    </picture>
+                  </div>
+                </sly>
+              </sly>
+            </sly>
+          </div>
+          <div class="swiper-button-next mf-swiper-button-next"></div>
+          <div class="swiper-button-prev mf-swiper-button-prev"></div>
+          <div class="swiper-pagination mf-swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<sly
+  data-sly-call="${templates.placeholder @ isEmpty = !properties.imageAltText}"
+></sly>

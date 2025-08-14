@@ -1,0 +1,14 @@
+
+	.video-container{
+		padding-top: 45px;
+    	
+    }
+
+    @media (max-width:768px){
+
+    .video-container{
+		width:100% !important;
+        height: 300px !important;
+        padding:35px 0px 0px;
+    }
+}

@@ -1,0 +1,56 @@
+.verticalsocialshare .vertical-social-container {
+    position: fixed;
+    right: 0;
+    z-index: 20;
+    max-width: 1400px;
+}
+.verticalsocialshare .vertical-socialshare {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-top: 80px;
+    cursor: pointer;
+}
+.verticalsocialshare .vertical-socialshare a {
+    display: block;
+    padding: 0px;
+    transition: all 0.3s ease;
+}
+.verticalsocialshare .vertical-socialshare img {
+    width: 30px;
+}
+.verticalsocialshare .vertical-copy-icon img {
+    width: 90px;
+}
+.verticalsocialshare .vertical-copied-icon img {
+    width: 90px;
+}
+.verticalsocialshare .vertical-copy-icon {
+    position: absolute;
+    display: none;
+    top: 75px;
+    right: 110px;
+    padding: 4px;
+    font-size: 12px;
+    width: 60%;
+}
+.verticalsocialshare .vertical-copied-icon {
+    position: absolute;
+    display: none;
+    top: 75px;
+    right: 110px;
+    padding: 4px;
+    font-size: 12px;
+    width: 60%;
+}
+.verticalsocialshare .vertical-share-icon {
+    cursor: pointer;
+}
+.verticalsocialshare .cmp-link__screen-reader-only {
+    display: none;
+}
+@media (max-width: 768px) {
+    .verticalsocialshare .vertical-social-container {
+        display: none;
+   }
+}

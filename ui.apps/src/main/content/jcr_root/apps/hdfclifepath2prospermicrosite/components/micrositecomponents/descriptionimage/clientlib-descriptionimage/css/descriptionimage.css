@@ -1,0 +1,76 @@
+.descriptionimage .textimage-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 45px 0px 0px 50px;
+  gap: 2%;
+}
+.descriptionimage .description-image-container {
+  display: flex;
+  width: 80%;
+}
+.descriptionimage .textimage-title {
+  width: 20%;
+  font-family: "poppins-semibold";
+  color: #000000;
+  text-align: left;
+}
+.descriptionimage .textimage-text {
+  flex-grow: 1;
+  max-width: 60%;
+  background-color: #ed1c24;
+  color: white;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.descriptionimage .textimage-image {
+  flex-grow: 1;
+  object-fit: cover;
+  margin-left: 20px;
+  width: 40%;
+}
+.descriptionimage br {
+  display: block;
+}
+.descriptionimage .textimage-title-padding {
+  padding-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .descriptionimage br {
+    display: none;
+ }
+  .descriptionimage .textimage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 35px 20px 0px;
+ }
+  .descriptionimage .description-image-container {
+    border: 1px solid #ed1c24;
+    width: 100%;
+    flex-direction: column;
+ }
+  .descriptionimage .textimage-title {
+    width: 100%;
+    color: #000000;
+    text-align: left;
+    font-family: "poppins-semibold";
+ }
+  .descriptionimage .textimage-text {
+    flex-grow: 1;
+    max-width: 100%;
+    background-color: #ed1c24;
+    font-style: italic;
+    color: white;
+    margin: 0px;
+    line-height: 24px;
+ }
+  .descriptionimage .textimage-image {
+    flex-grow: 1;
+    object-fit: cover;
+    width: 100%;
+    margin: 0px;
+ }
+}

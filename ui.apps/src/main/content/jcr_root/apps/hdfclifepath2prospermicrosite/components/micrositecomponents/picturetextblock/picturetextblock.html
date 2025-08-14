@@ -1,0 +1,26 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"
+	data-sly-call="${clientlib.all @ categories='picturetextblock'}" />
+
+
+<section id="${properties.sectionName}">
+	<div class="imagetext-container" data-sly-test="${properties.description}">
+		<div class="imagetext-title">
+			<div class="imagetext-title-end">
+				${properties.title}
+			</div>
+		</div>
+		<div class="desc-img-con">
+			<div class="imagetext-con">
+				<div class="imagetext-text">
+					${properties.description @context='html'}
+				</div>
+				<div class="imagetext-plaintext">${properties.plaintext @context='html'}</div>
+			</div>
+			<img class="imagetext-image" src="${properties.imagePath}" alt="${properties.alttext}">
+		</div>
+		<div class="imagetext-mobile-view-plaintext"> ${properties.plaintext @context='html'}
+		</div>
+</section>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.description}"></sly>

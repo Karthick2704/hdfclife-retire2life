@@ -1,0 +1,769 @@
+.calci-comp {
+	margin: 0px 50px;
+	font-family: 'poppins-regular';
+}
+
+/* Ensure this rule has higher specificity */
+.calci-comp .calci-tab-heading.faded {
+	opacity: 0.5 !important;
+	color: grey;
+	pointer-events: none !important;
+	transition: opacity 0.3s ease-in-out !important;
+}
+
+/* Optionally, you can add a hover effect to show that the tab is clickable */
+.calci-comp .calci-tab-heading:hover {
+	opacity: 1 !important;
+}
+
+.calci-tab-items {
+	display: flex;
+	align-items: center;
+}
+
+.calci-comp .calci-tab-title {
+	width: 25%;
+	padding:30px 0 30px 30px;
+	font-family: 'poppins-semibold';
+}
+
+.calci-tab1-slide-container{
+	width: 75%;
+}
+
+.calci-comp .calci-tab-headings {
+	--bs-nav-tabs-border-width: none !important;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	height: 80px;
+}
+
+.calci-comp .calci-tab-heading {
+	display: flex;
+}
+
+.calci-comp .nav-tabs .calci-nav-link {
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 28px;
+	color: #ed1c24;
+	font-family: 'poppins-bold';
+	margin-right: 15px;
+	background-color: #f9f9f9;
+	border: 4px solid #ed1c24 !important;
+	opacity: 0.5;
+	pointer-events: none;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.calci-comp .nav-tabs .calci-nav-link.active {
+	opacity: 1;
+	background-color: #f2f0f0;
+	pointer-events: auto;
+}
+
+.calci-comp .nav-tabs .calci-nav-link.completed {
+	background-color: #ed1c24;
+	border: none;
+	opacity: 1;
+	pointer-events: none;
+}
+
+.calci-comp .nav-tabs .calci-nav-link.completed::before {
+	content: "\2713";
+	font-size: 36px;
+	font-family: 'poppins-bold';
+	color: #ffffff;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.calci-comp .nav-tabs .calci-nav-link.completed span {
+	display: none;
+}
+
+.calci-comp .calci-step-heading {
+	font-size: 18px;
+	color: #ed1c24;
+	font-family: 'poppins-bold';
+	padding-right: 10px;
+}
+
+.calci-comp .calci-tab-content {
+	border: 2px solid #dbdbdb;
+	display: flex;
+	border-radius: 20px;
+	margin-top: 30px;
+}
+
+.calci-comp .calci-lbl-nme {	
+	font-family: 'poppins-semibold';
+	color: #000;
+}
+
+.calci-comp .input-box {
+	margin-top: 20px;
+	padding-right: 62px;
+	background-color: #f2f0f0;
+	width: 205px;
+	height: 55px;
+	border: 0px solid #ddd;
+	border-bottom: 1.5px solid #000;
+	color: #ED1C24;	
+	font-family: 'poppins-bold';
+	padding-left: 5px;
+	line-height: 48px;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.calci-comp .error-message {
+	position: absolute;
+    left: 0px;
+    bottom: -18px;
+    right: -100px;
+	margin-top: 5px;
+	font-size: 9px;
+	color: #ED1C24;
+	font-family: 'poppins-regular';
+}
+
+.calci-comp .input-box:focus {
+	border: 0px solid #ddd;
+	outline: none;
+	border-bottom: 2px solid #000;
+}
+
+.calci-comp .calci-form-range,
+.calci-comp .calci-inflation-range,
+.calci-comp .calci-intrest-range{
+	-webkit-appearance: none;	
+	appearance: none;	
+	width: 100%;
+	height: 4px;
+	background: linear-gradient(to right, #ed1c24 50%, lightgray 50%);
+	outline: none;
+	position: relative;
+}
+
+.calci-comp .calci-inflation-range,.calci-comp .calci-intrest-range{
+	margin-top: 30px;
+}
+
+.calci-comp .calci-form-range {
+	margin-top: 55px;
+}
+
+.calci-comp .calci-form-range::-webkit-slider-runnable-track,
+.calci-comp .calci-inflation-range::-webkit-slider-runnable-track,
+.calci-comp .calci-intrest-range::-webkit-slider-runnable-track{
+	-webkit-appearance: none;
+	/* Remove default track styles */
+	appearance: none;
+	height: 4px;
+	background: transparent;
+	/* Use the defined background */
+	border-radius: 2px;
+	position: relative;
+}
+
+.calci-comp .calci-form-range::-moz-range-track {
+	height: 4px;
+	background: transparent;
+	border-radius: 2px;
+	position: relative;
+}
+
+.calci-comp .calci-form-range::-webkit-slider-thumb,
+.calci-comp .calci-intrest-range::-webkit-slider-thumb,
+.calci-comp .calci-inflation-range::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	/* Remove default thumb styles */
+	height: 16px;
+	width: 16px;
+	background: white;
+	border: 2px solid #ed1c24;
+	border-radius: 50%;
+	cursor: pointer;
+	margin-top: -5px;
+	/* Align with track */
+	position: relative;
+}
+
+.calci-comp .calci-form-range::-moz-range-thumb {
+	height: 16px;
+	width: 16px;
+	background: white;
+	border: 2px solid #ed1c24;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.calci-comp .calci-form-range:focus {
+	outline: none;
+}
+
+.calci-comp .calci-range-value {
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+	color: #888;
+	padding: auto;
+}
+
+.calci-comp .calci-range-and-value {	
+	margin: 20px 0 0 40px;
+	padding-right: 40px;
+	position: relative;
+	width: 100%;
+}
+
+.calci-comp .calci-inflation-range:focus,
+.calci-comp .calci-intrest-range:focus {
+	outline: none;
+}
+
+.calci-comp .calci-summary-range-value {
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+	color: #A8A5A5;
+	padding: 0px 0px 12px 0px;
+}
+
+.calci-comp button.btnNext,
+.calci-comp button.btnPrevious {
+	all: unset;
+	/* Reset all inherited styles */
+	cursor: pointer;
+	/* Change cursor to pointer for better UX */
+	display: inline-block;
+	/* Make it behave like an inline-block element */
+}
+
+.calci-comp .current-age,
+.calci-comp .calci-current-age-input {
+	position: relative;
+	width: 205px;
+}
+
+.calci-comp .current-age-span {
+	position: absolute;
+	right: 10px;
+	top: 37px;
+	color: #A8A5A5;
+	pointer-events: none;	
+	font-family: "poppins-semibold";
+}
+
+.calci-comp .c-current-age-span {
+	position: absolute;
+	right: 5px;
+	top: 13px;
+	color: #888;
+	pointer-events: none;
+	font-size: 14px;
+	font-family: "poppins-semibold";
+}
+
+.calci-comp #expenseInput[style*="display: none"]+.current-age-span {
+	display: none !important;
+}
+
+
+.calci-comp .calc-button-container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: end;
+	align-items: center;
+	width: 20%;
+	margin-bottom: 30px;
+}
+
+.calci-comp .calci-tab-content>.active {
+	width: 100%;
+}
+
+.calci-comp .calci-plain-text {	
+	font-size: 14px;
+	color: #A8A5A5;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.calci-comp .radio-group {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	margin: 20px 0px 10px 0px;
+}
+
+.calci-comp .radio {
+	position: relative;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'poppins-semibold';
+	color: #A8A5A5;
+}
+
+.calci-comp .radio input[type="radio"] {
+	appearance: none;
+	/* Hide default radio button */
+	position: relative;
+	width: 18px;
+	height: 18px;
+	border: 1.5px solid #ed1c24;
+	/* Circle border color */
+	border-radius: 50%;
+	/* Make it round */
+	outline: none;
+	cursor: pointer;
+	margin-right: 8px;
+}
+
+.calci-comp .radio input[type="radio"]:checked::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 8px;
+	height: 8px;
+	background-color: #ed1c24;
+	border-radius: 50%;
+	font-family: 'poppins-semibold';
+}
+
+
+.calci-comp .radio input[type="radio"]:hover {
+	border-color: #ed1c24;
+}
+
+.calci-comp .radio input[type="radio"]:focus {
+	box-shadow: 0 3px 3px 1px #dbdbdb;
+}
+
+.calci-comp .radio input[type="radio"]:checked+.calci-rd-value {
+	color: #000000;
+}
+
+.calci-comp .calci-radio-texts {
+	display: flex;
+	align-items: center;
+}
+
+.calci-comp .calci-next-button,
+.calci-comp .btnPrevious a,
+.calci-comp .btnNext a,
+.calci-comp .lastBtn a {
+	display: inline-block;
+	width: 120px;
+	height: 30px;
+	font-size: 14px;
+	font-family: 'poppins-bold';
+	border-radius: 22px;
+	text-decoration: none;
+	background: #ed1c24;
+	cursor: pointer;
+	color: #ffffff;
+	transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.calci-comp div.lastBtn a.calci-next-button:hover {
+	background-color: #ed1c24;
+	color: #ffffff;
+}
+
+.calci-comp div.lastBtn a:hover {
+	background-color: #ED1C24 !important;
+	color: #ffffff !important;
+	opacity: 1 !important;
+}
+
+.current-age .calci-tab2-annual-container{
+	margin: 30px 0;
+}
+
+.calci-comp .btnNext a {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.calci-comp .btnNext a:hover {
+	background: #ED1C24;
+	color: #ffffff;
+}
+
+.calci-comp .lastBtn a {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.calci-comp .btnPrevious a {
+	background: darkslategrey;
+	opacity: 0.5;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.calci-comp .btnPrevious a:hover,
+.calci-comp .btnPrevious a:active {
+	background: darkgray;
+	color: #ffffff;
+	opacity: 1;
+}
+
+.calci-comp #calci-tab5 h2 {
+	margin: 10px 0;
+	font-family: 'poppins-bold';
+}
+
+.calci-comp #calci-tab5 p {
+	margin: 5px 0;
+}
+
+.calci-comp .calci-tabs {
+	display: flex;
+	gap: 30px;
+}
+
+.calci-comp .calci-input-range {
+	display: flex;
+	margin: 30px 0;	
+}
+
+.calci-comp .calci-input-box {	
+	width: 75%;
+	margin-top: 30px;
+}
+
+.calci-comp .slider-tooltip,
+.calci-comp .slider-tooltip-tab5 {
+	color: #ED1C24;	
+	font-family: 'poppins-bold';
+	position: absolute;
+	top: 20px;
+	left: 0;
+	transition: left 0.1s;
+	width: 10%;
+}
+
+.calci-comp .slider-tooltip-tab5 {
+    top: 0px;
+}
+
+.calci-comp .calci-retirement-type {
+	margin-bottom: 30px;
+}
+
+.calci-comp .calci-tab5-heading {	
+	font-family: 'poppins-semibold';
+	margin-bottom: 10px;
+}
+
+.calci-comp #monthly-savings-message {	
+	margin: 16px 0px 20px 0px;
+}
+
+.calci-comp .calci-tab5-results {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 35px;
+}
+
+.calci-comp .calci-tab-5-innercontainer {
+	display: flex;
+	flex-direction: row;
+}
+
+.calci-tab5-toolip{
+	position: relative;
+	width: 450px;
+}
+
+.calci-comp-tab4-radio {
+	display: flex;
+	flex-direction: column;
+}
+
+.calci-comp-hr {
+	width: 1px;
+	background: grey;
+	margin: 0;
+}
+
+.calci-comp-tab5-display {
+	width: 75%;
+	padding: 30px 20px;
+}
+
+.calci-comp #cal-lab-name {
+	white-space: nowrap;
+}
+
+@media (max-width: 1110px) and (min-width: 769px) {
+	.calci-comp .calci-tab-content {
+		flex-direction: column;
+	}
+
+	.calci-comp .calc-button-container {
+		align-items: end;
+		width: 98%;
+		flex-direction: row;
+		width: 98%;
+	}
+
+	.calci-comp .radio-group{
+		flex-direction: column;
+	}
+
+	.calci-comp .nav-tabs .calci-nav-link {
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		font-size: 18px;
+	}
+
+	.calci-comp .calci-step-heading {
+		font-size: 14px;
+	}
+
+}
+
+@media (max-width: 768px) {
+	.calci-comp {
+		font-family: 'poppins-regular';
+		margin: 0px 20px;
+	}
+
+	.calci-container {
+		overflow: hidden;
+		justify-content: flex-start;
+		position: relative;
+		width: 100%;
+		padding: 0;
+	}
+
+	.calci-comp .calci-tabs {
+		gap: 0;
+		flex-direction: column;
+	}
+
+	.calci-comp .nav-tabs .calci-nav-link:last-child {
+		width: 50px;
+        font-size: 20px;
+        height: 50px;
+        padding: 0;
+        margin-right: 5px;
+	}
+
+	.calci-comp .nav-tabs {
+		justify-content: start;
+		--bs-nav-tabs-border-width: none;
+	}
+
+	.calci-comp .calci-step-heading {
+		font-size: 14px;
+	}
+
+	.calci-comp .nav {
+		transform: translateX(0);
+		display: flex;
+		transition: transform 0.3s ease;
+		width: 100%;
+	}
+
+	.calci-comp .calci-tab-title {
+		width: 100%;
+		padding: 0;
+		white-space: nowrap;
+		margin-bottom: 10px;
+	}
+
+	.calci-comp .calci-tab-title br {
+		display: none;
+	}
+
+	.calci-comp .calci-tab-heading {
+		filter: blur(0);
+		opacity: 50%;
+		display: flex;
+		padding-right: 25px;
+	}
+
+	.calci-tab1-slide-container{
+		width: 100%;
+	}
+
+	.calci-comp .active {
+		opacity: 100%;
+		background: none;
+	}
+
+	.calci-comp .calci-lbl-nme {		
+		white-space: normal;
+	}
+
+	.calci-comp .slider-tooltip {
+		top: 0px;
+	}
+
+	.calci-tab5-toolip{
+		width: 100%;
+	}
+
+	.calci-comp .calci-input-box {
+		margin-top: 0;
+	}
+
+	.calci-comp .calci-input-range {
+		flex-direction: column;
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+
+	.calci-comp .calci-range-and-value {
+		margin: 15px 0px 0px 0px;
+		padding-right: 0;		
+	}
+
+	.calci-comp .tab-content {
+		border: 1px solid #dbdbdb;
+		display: flex;
+		flex-direction: column;
+		border-radius: 20px;
+		margin-top: 30px;
+		width: 100%;
+		margin-left: 0;
+		padding: 20px;
+	}
+
+	.calci-comp .calci-form-range,
+	.calci-comp .calci-inflation-range,
+	.calci-comp .calci-intrest-range {
+		-webkit-appearance: none;
+		margin-top: 30px;
+	}
+
+	.calci-comp .calci-range-value {
+		font-size: 12px;
+		width: 100%;
+	}
+
+	.calci-comp .tab-content hr {
+		display: none;
+	}
+
+	.calci-comp .calci-plain-text {
+		font-size: 12px;
+		color: gray;
+		margin-top: 20px;
+		white-space: pre-line;
+	}
+
+	.calci-comp .calci-retirement-type {
+		margin-bottom: 0;
+	}
+
+	.calci-comp .radio-group {
+		flex-direction: column;
+		gap: 10px;
+		align-items: flex-start;
+	}
+
+	.calci-comp .radio {
+		font-size: 12px;
+		color: #666;
+	}
+
+	.calci-comp .radio input[type="radio"] {
+		width: 19px;
+		height: 19px;
+	}
+
+	.calci-comp .calci-tab-headings {
+		overflow: visible;
+		white-space: normal;
+	}
+
+	.calci-comp .calc-button-container {
+		width: 100%;
+		margin-top: 30px;
+		flex-direction: row;
+		align-items: flex-start;		
+	}
+
+
+	.calci-comp .calci-tab5-results {
+		flex-direction: column;
+	}
+
+	.calci-comp .calci-summary-range-value {
+		width: 100%;
+		font-size: 12px;
+	}
+
+	.calci-comp .calci-tab-5-innercontainer {
+		flex-direction: column;
+	}
+
+	.calci-comp .monthly-result {
+		font-size: 14px;
+	}
+
+	.calci-comp .calci-next-button,
+	.calci-comp .btnPrevious a,
+	.calci-comp .btnNext a,
+	.calci-comp .lastBtn a {
+		width: 80px;
+		height: 30px;
+	}
+
+	.calci-comp .btnPrevious a {
+		font-size: 14px;
+		width: 120px;
+	}
+
+	.calci-comp .btnNext a {
+		font-size: 14px;
+		width: 120px;
+	}
+
+	.calci-comp .lastBtn a {
+		font-size: 14px;
+		width: 120px;
+	}
+
+	.calci-comp #monthly-savings-message {		
+		font-family: 'poppins-semibold';
+	}
+
+	.calci-comp-tab5-display {
+		padding: 0px;
+	}
+}
+
+.calci-comp .errorMessage {
+	position: absolute !important;
+	top: 115% !important;
+	color: #ED1C24 !important;
+}
+
+@media (max-width: 425px) {
+    .calci-comp .btnPrevious a,
+	.calci-comp .lastBtn a,
+	.calci-comp .btnNext a
+	 {
+        font-size: 12px;
+        width: 100px;
+    }
+}

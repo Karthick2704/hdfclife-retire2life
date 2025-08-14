@@ -1,0 +1,175 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-use.navigationModel="com.hdfclife.path2prospermicrosite.core.models.HeaderModel" />
+
+<div class="hc-main-container" data-sly-test="${properties.logoImageAltText}">
+    <div id="hc-desktop-main-container">
+        <!-- Header Section -->
+        <div id="hc-header-container-section" style="display: block;">
+            <div class="hc-header-container">
+                <div class="hc-header-container-logo-image">
+                        <a href="${properties.logoImageLink}">
+                            <img src="${properties.logoImage}" alt="${properties.logoImageAltText}" style="width:80%;">
+                        </a>
+                </div>
+                <div class="hc-header-conatiner-header-text">
+                    ${properties.description @context='html'}
+                </div>
+                <div class="hc-header-conatiner-message-image" data-subject="${properties.mailSubject}">
+                    <a href="#" onclick="openGmailCompose()">
+                        <img src="${properties.messageIcon}" alt="${properties.messageIconAltText}">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Section -->
+            <div class="hc-header-nav-conatiner">
+                <div class="hc-header-nav-first-section">
+                    <div class="hc-header-nav-option-container">
+                        <ul>
+                        	<li><a href="${properties.homePath}"><img src="${properties.menuIcon}" alt="${properties.menuIconAltText}"></a></li>
+                            <sly data-sly-list.item="${navigationModel.sectionOneBrandDetails}">
+                                <li style="width: 15%;">
+                                    <a href="${item.targetPath}" class="hc-nav-item hc-nav-link-ltr" id="${item.title}">
+                                        <span class="hc-header-page-title">${item.title}</span>
+                                    </a>
+                                </li>
+                            </sly>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hc-header-nav-search-div">
+                    <span>
+                        <img src="${properties.searchIcon}" alt="${properties.searchIconAltText}"   onclick="toggleSearch()" >
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Container -->
+        <div id="hc-searchContainer" class="hc-search-container" style="display: none;">
+            <div class="hc-search-container-div">
+                <div class="hc-search-container-section">
+                    <div class="hc-search-container-logo-image">
+                        <div id="hc-hamburger-menu-icon">
+                           <a href="${properties.homePath}">
+								<img src="${properties.menuIcon}" alt="${properties.menuIconAltText}"   style="width:30px;"></a>
+                        </div>
+                        <div id="hc-secondary-logo-image">
+                            <a href="${properties.mobileSecondaryLogoImageLink}">
+								<img src="${properties.mobileSecondaryLogoImage}" alt="${properties.mobileSecondaryLogoImageAltText}" style="width:92px;"></a>
+                        </div>
+                    </div>
+                    <div class="hc-header-conatiner-header-text">
+                        ${properties.description @context='html'}
+                    </div>
+                    <div class="hc-header-conatiner-message-image">
+                        <div class="hc-search-container-searchIcon">
+                            <a href="${properties.searchPath}"><img src="${properties.searchIcon}"
+                                    alt="${properties.searchIconAltText}"></a>
+                        </div>
+                        <div class="hc-search-container-menuIcon">
+                            <a href="#" onclick="openGmailCompose();">
+                                <img src="${properties.messageIconTwo}" alt="${properties.messageIconAltText}">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hc-search-functionality-container" class="hc-search-functionality-container">
+					<div id="hc-search-cancel-button-section" class="hc-search-cancel-button-section">
+                        <div class="hc-search-cancel-button">
+                            <img src="${properties.cancelIcon}" alt="${properties.cancelIconAltText}" onclick="toggleSearch()">
+                        </div>
+                	</div>
+                    <div class="hc-search-description">
+                        ${properties.searchDescription}
+                    </div>
+                    <div class="hc-search-searchBar">
+                        <input type="text" class="hc-search-input" id="hc-inputForm" />
+                        <button type="button" class="hc-search-button" id="hc-submit"
+                            data-search-path="${properties.searchPath}">
+                            <img src="${properties.inputSearchIcon}" alt="${properties.inputSearchIconAlt}" class="search-icon" style="width:42px;">
+                        </button>
+                    </div>
+                </div>
+			</div>
+        </div>
+    </div>
+    <!-- mobile-view -->
+    <div id="hc-header-mobile-main-container">
+        <div class="hc-header-mobile-main-section">
+            <div class="hc-header-mobile-section-one" style="height:85px;">
+                <div class="hc-header-mobile-section-one-image">
+                    <div class="hc-header-mobile-primary-logo">
+                        <a href="${properties.logoImageLink}">
+                            <img src="${properties.logoImage}" id="secondaryLogoImage" alt="${properties.logoImageAltText}" style="width:100%;display:block;">
+                            <img src="${properties.mobileSecondaryLogoImage}" id="mobileSecondaryLogoImage" alt="${properties.mobileSecondaryLogoImageAltText}" style="display:none;width:100%;">
+                        </a>
+                    </div>
+                </div>
+                <div class="hc-header-mobile-hamburger">
+                    <img src="${properties.mobileMenuIcon}" id="mobileMenuImage" alt="${properties.mobileMenuIconAltText}">
+
+                    <img src="${properties.cancelIcon}" id="mobileMenuCancelImage" alt="${properties.cancelIconAltText}">
+                </div>
+            </div>
+
+            <div class="hc-header-mobile-section-two">
+                <div class="hc-header-mobile-section-two-description">
+                    ${properties.description @context='html'}
+                </div>
+                <div class="hc-header-mobile-section-two-image">
+                    <a href="${properties.messageIconLink}">
+                        <img src="${properties.mobileMessageIcon}" alt="${properties.mobileMessageIconAltText}"
+                            onclick="openGmailCompose()" id="mobileMessageIcon" style="display:none;">
+                        <img src="${properties.mobileMessageIconTwo}" alt="${properties.mobileMessageIconAltText}"
+                            onclick="openGmailCompose()" id="mobileMessageIconTwo" style="display:block">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hc-header-mobile-nav-search-section" id="hc-header-mobile-nav-search-section"
+            style="display: none;">
+            <div class="hc-header-mobile-search-section">
+                <div class="hc-header-mobile-search-hr-div">
+                    <hr class="hc-header-mobile-search-hr">
+                </div>
+            </div>
+            <div class="hc-header-mobile-side-menu-container">                
+                <div class="hc-header-mobile-sideMenuOption-container">
+                    <div id="hc-header-mobile-search-container-section" class="hc-header-mobile-search-container-section" >
+                        <div class="hc-header-mobile-search-container-input">
+                            <div class="hc-header-mobile-search-bar">
+                                <input type="text" class="hc-header-mobile-search-input" id="hc-inputForm1" placeholder="${properties.searchPlaceholder}" />
+                                    <button class="hc-header-mobile-search-button" id="hc-submit2"	data-search-path="${properties.searchPath}">
+                                        <img src="${properties.inputSearchIcon}" alt="${properties.inputSearchIconAlt}" width="28px">
+                                    </button>
+                            </div>
+                        </div>
+                    </div>                
+                        <ul>                            
+                            <sly data-sly-list.item="${navigationModel.sectionOneBrandDetails}">
+                                <li>
+                                    <a href="${item.targetPath}">
+                                        <span class="hc-header-page-title">${item.title}</span>
+                                    </a>
+                                </li>
+                            </sly>
+                        </ul>
+                    
+                </div>
+                <div class="hc-header-mobile-SideMenuDes">${properties.menuDisclaimer}</div>
+            </div>
+        </div>
+
+        <div class="hc-mobile-color-border" style="display: flex;box-shadow:rgb(68 68 68 / 66%) 0px 4px 9px 0px;">
+            <div style="height: 7px;background-color: #d5af30;width: 10%;"></div>
+            <div style="height: 7px;background-color: #ed1c24;width: 30%;"></div>
+            <div style="height: 7px;background-color: #00ACC4;width: 30%;"></div>
+            <div style="height: 7px;background-color: #c7a9d0;width: 30%;"></div>
+        </div>
+    </div>
+
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.logoImageAltText}"></sly>

@@ -1,0 +1,15 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<div class="containerimagetext">
+    <div class="boximagetext">
+        <img class="textimage-image" src="${properties.imagePath}" alt="${properties.alttext}">
+    </div>
+    <div class="labelimagetext">
+       
+            ${properties.description @context='html'} 
+
+    </div>
+</div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.description}"></sly>
+

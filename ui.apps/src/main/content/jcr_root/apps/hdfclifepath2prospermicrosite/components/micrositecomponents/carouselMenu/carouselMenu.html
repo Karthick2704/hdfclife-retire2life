@@ -1,0 +1,26 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-use.model="com.hdfclife.path2prospermicrosite.core.models.CarouselMenuItem" />
+    
+<div class="cm-swiper-container" data-sly-test="${properties.rightIconAltText}">
+    <div class="swiper cm-swiper">
+        <div class="swiper-wrapper cm-swiper-wrapper">
+            <sly data-sly-list.item="${model.sectionOneBrandDetails}">
+                <div class="p2p-font-18 swiper-slide cm-active cm-swiper-slide" style="background: white;">
+                    <a href="#${item.targetName}" getAttr="${item.targetName}" class="cm-swiper-slide-anchor">
+                        <div class="cm-carousel-title">${item.title}</div>
+                    </a>
+                </div>
+            </sly>
+        </div>
+
+        <div class="cm-button-prev" style="position: absolute;bottom: 14px;left: 0;z-index: 1;">
+            <img src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/left-arrow-blue.svg" alt="${properties.leftIconAltText}" />
+        </div>
+        <div class="cm-button-next" style="position: absolute;bottom: 14px;right: 0;z-index: 1;">
+            <img src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/right-arrow-blue.svg" alt="${properties.rightIconAltText}" />
+        </div>
+    </div>
+</div>
+
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.leftIconAltText}"></sly>

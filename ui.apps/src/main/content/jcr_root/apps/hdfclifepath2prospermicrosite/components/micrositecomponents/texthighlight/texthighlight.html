@@ -1,0 +1,15 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<section id="${properties.sectionName}">
+  <div class="texthighlight-text-container">
+    <div class="texthighlight-title">
+      ${properties.title @context='html'}
+    </div>
+    <div class="texthighlight-description">
+      <p> ${properties.description @context='html'}</p>
+    </div>
+  </div>
+
+</section>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"></sly>

@@ -1,0 +1,165 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-use.model="com.hdfclife.path2prospermicrosite.core.models.ArticleBlogModel" />
+
+<section id="${properties.sectionName}">
+
+    <div class="articleBlog-section-background ${properties.isbgcolor ? 'bgcolor' : ''}" data-sly-test="${properties.headerTitle}">
+        <div class="articleBlog-container">
+            <h2 class="articleBlog-header">${properties.headerTitle}</h2>
+    
+            <div class="card-grid articleBlog-card-grid">
+                <!-- Loop through sectionOneBrandDetails -->
+                <sly data-sly-list.sectionOne="${model.sectionOneBrandDetails}">
+                    <div class="card articleBlog-card">
+                        <!-- Blog Link and Image -->
+                        <a href="${sectionOne.blogLink @ context='uri'}.html" >
+                            <img src="${sectionOne.blogImage @ context='uri'}" alt="${sectionOne.altImage}"
+                                class="articleBlog-image">
+                        </a>
+    
+                        <div class="card-content articleBlog-card-content">
+                            <div class="meta articleBlog-meta">
+                                <!-- Blog type and read time -->
+                                <div class="blog-meta articleBlog-blog-meta">
+                                    <div><img src="${sectionOne.blogIcon @ context='uri'}" alt="${sectionOne.altIcon}" />
+                                    </div>
+                                    <div class="type-readtime articleBlog-type-readtime">
+                                        <span class="type articleBlog-type">${sectionOne.blogType @ context="html"}</span>
+                                    </div>
+                                </div>
+    
+                                <!-- Date Info -->
+                                <div class="date-info articleBlog-date-info">
+                                    <div class="date articleBlog-date">
+                                        <img src="${sectionOne.imagePath}" alt="${sectionOne.altTime}" />
+                                        <span>${sectionOne.blogDate @ context="html"}</span>
+                                    </div>
+                                </div>
+    
+                                <!-- Share Icon Section -->
+                                <div class="share-section articleBlog-share-section">
+                                    <div class="share-icon articleBlog-share-icon" onclick="togglePopup(this)">
+                                        <img src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/mediahub-share.svg" alt="icon" />
+                                    </div>
+    
+    
+                                    <!-- Share Popup -->
+                                    <div class="share-popup articleBlog-share-popup">
+                                        <div class="articleBlog-twitterlogo">
+                                            <a  class="socialMediaLinks" href="https://twitter.com/intent/tweet?text="
+                                                target="_blank" data-target-link="${sectionOne.blogLink @ context='uri'}.html">
+                                                <img src="${sectionOne.mediaTwitter}"
+                                                    alt="${sectionOne.altTwitter}" />
+                                            </a>
+                                        </div>
+                                        <div class="articleBlog-facebooklogo">
+                                            <a class="socialMediaLinks" href="https://www.facebook.com/sharer/sharer.php?u="
+                                                target="_blank" data-target-link="${sectionOne.blogLink @ context='uri'}.html">
+                                                <img src="${sectionOne.mediaFacebook}"
+                                                    alt="${sectionOne.altFacebook}" />
+                                            </a>
+                                        </div>
+                                        <div class="articleBlog-linkedinlogo">
+                                            <a class="socialMediaLinks" href="https://www.linkedin.com/sharing/share-offsite/?url="
+                                                target="_blank" data-target-link="${sectionOne.blogLink @ context='uri'}.html">
+                                                <img src="${sectionOne.mediaLinkedin}"
+                                                    alt="${sectionOne.altLinkedin}" />
+                                            </a>
+                                        </div>
+                                        <div class="articleBlog-whatsapplogo">
+                                            <a class="socialMediaLinks" href="https://wa.me/?text="
+                                                target="_blank" data-target-link="${sectionOne.blogLink @ context='uri'}.html">
+                                                <img src="${sectionOne.mediaWhatsapp}"
+                                                    alt="${sectionOne.altWhatsapp}" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="articleBlog-title-description" style="padding: 0 10px 10px 10px;">
+                                <!-- Blog Title -->
+                                <a href="${sectionOne.blogLink @ context='uri'}.html" class="articleBlog-title"
+                                     data-sly-test="${sectionOne.blogLink}">${sectionOne.blogTitle @
+                                    context="html"}</a>
+                            </div>
+                        </div>
+    
+                    </div>
+                </sly>
+            </div>
+    
+            <!-- Carousel for mobile view -->
+    
+            <div class="carouselmediahub articleBlog-carouselmediahub">
+                <div class="swiper articleBlog-swiper">
+                    <div class="swiper-wrapper articleBlog-swiper-wrapper">
+                        <sly data-sly-list.sectionOne="${model.sectionOneBrandDetails}">
+                            <div class="swiper-slide articleBlog-swiper-slide">
+                                <div class="card articleBlog-card">
+                                    <a href="${sectionOne.blogLink @ context='uri'}.html">
+                                        <img src="${sectionOne.blogImage @ context='uri'}" alt="${sectionOne.altImage}" class="articleBlog-image">
+                                    </a>
+                                    <div class="card-content articleBlog-card-content">
+                                        <div class="meta articleBlog-meta">
+                                            <div class="blog-meta articleBlog-blog-meta">
+                                                <div>
+                                                    <img src="${sectionOne.blogIcon @ context='uri'}" alt="${sectionOne.altIcon}" />
+                                                </div>
+                                                <div class="type-readtime articleBlog-type-readtime">
+                                                    <span class="type articleBlog-type">${sectionOne.blogType @ context="html"}</span>
+                                                </div>
+                                            </div>
+                                            <div class="date-info articleBlog-date-info">
+                                                <div class="date articleBlog-date">
+                                                    <img src="${sectionOne.imagePath}" alt="${sectionOne.altTime}" />
+                                                    <span>${sectionOne.blogDate @ context="html"}</span>
+                                                </div>
+                                            </div>
+                                            <div class="share-section articleBlog-share-section">
+                                                <div class="share-icon articleBlog-share-icon" onclick="togglePopup(this)">
+                                                    <img src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/mediahub-share.svg" alt="icon" />
+                                                </div>
+                                                <div class="share-popup articleBlog-share-popup">
+                                                    <div class="articleBlog-twitterlogo">
+                                                        <a class="socialMediaLinks" href="https://twitter.com/intent/tweet?text=" target="_blank" data-target-link="${sectionOne.blogLink @ context='uri'}.html">
+                                                            <img src="${sectionOne.mediaTwitter}" alt="${sectionOne.altTwitter}">
+                                                        </a>
+                                                    </div>
+                                                    <div class="articleBlog-facebooklogo">
+                                                        <a class="socialMediaLinks" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" data-target-link="${sectionOne.blogLink @ context='uri'}.html" >
+                                                            <img src="${sectionOne.mediaFacebook}" alt="${sectionOne.altFacebook}">
+                                                        </a>
+                                                    </div>
+                                                    <div class="articleBlog-linkedinlogo">
+                                                        <a class="socialMediaLinks" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank" data-target-link="${sectionOne.blogLink @ context='uri'}.html">
+                                                            <img src="${sectionOne.mediaLinkedin}" alt="${sectionOne.altLinkedin}">
+                                                        </a>
+                                                    </div>
+                                                    <div class="articleBlog-whatsapplogo">
+                                                        <a class="socialMediaLinks" href="https://wa.me/?text=" target="_blank" data-target-link="${sectionOne.blogLink @ context='uri'}.html">
+                                                            <img src="${sectionOne.mediaWhatsapp}" alt="${sectionOne.altWhatsapp}">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="articleBlog-title-description" style="padding: 0 10px 10px 10px;">
+                                            <a href="${sectionOne.blogLink @ context='uri'}.html" class="articleBlog-title">${sectionOne.blogTitle @ context="html"}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </sly>
+                    </div>
+                </div>
+                <div class="swiper-button-prev articleBlog-carousel-control-prev-icon"></div>
+                <div class="swiper-button-next articleBlog-carousel-control-next-icon"></div>
+            </div>
+            <!--bootsrap carousel-->
+    
+        </div>
+    </div>
+</section>
+
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.headerTitle}"></sly>

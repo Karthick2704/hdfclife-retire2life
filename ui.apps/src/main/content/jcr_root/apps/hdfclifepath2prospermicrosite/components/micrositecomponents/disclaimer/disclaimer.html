@@ -1,0 +1,13 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<div class="disclaimer-container">
+  <div class="disclaimer-header" onclick="toggleDisclaimer()">
+    <p class="p2p-font-18 ">${properties.title  @context='html'}</p>
+    <span class="icon rotate" id="toggle-icon"> <img id="Image" src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/faq-dropdown.svg" alt="${properties.altTextImage}"></span>
+  </div>
+  <div class="disclaimer-content disclaimer-active p2p-font-12" id="disclaimer-content">
+    <p>${properties.description  @context='html'}</p>    
+  </div>
+</div>
+ 
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"></sly>

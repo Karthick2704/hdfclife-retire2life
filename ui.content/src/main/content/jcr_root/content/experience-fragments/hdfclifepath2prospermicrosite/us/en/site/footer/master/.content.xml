@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-12-23T09:26:38.280Z"
+        cq:lastModifiedBy="hdfc-admin"
+        cq:lastReplicated="{Date}2024-12-11T12:13:27.111Z"
+        cq:lastReplicatedBy="hdfc-admin"
+        cq:lastReplicationAction="Activate"
+        cq:tags="[]"
+        cq:template="/conf/hdfclifepath2prospermicrosite/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Footer"
+        jcr:uuid="be7bfe44-6386-4719-91de-022092d0f15c"
+        sling:resourceType="hdfclifepath2prospermicrosite/components/structure/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hdfclifepath2prospermicrosite/components/container"
+            layout="responsiveGrid">
+            <disclaimer_copy
+                jcr:created="{Date}2024-11-06T03:12:10.980+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-12-23T09:26:38.189Z"
+                jcr:lastModifiedBy="hdfc-admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hdfclifepath2prospermicrosite/components/micrositecomponents/disclaimer"
+                copyrightsDetails="&lt;p>&lt;b>&lt;span style=&quot;color: rgb(5,76,141);&quot;>© 2024 PATH&lt;/span>&lt;span style=&quot;color: rgb(237,28,36);&quot;>2&lt;/span>&lt;span style=&quot;color: rgb(5,76,141);&quot;>PROSPER. All rights reserved.&lt;/span>&lt;/b>&lt;/p>&#xd;&#xa;"
+                footerDescription="&lt;p>&lt;span style=&quot;color: rgb(5,76,141);&quot;>Disclaimer: HDFC Life Insurance Company Limited (&amp;quot;HDFC Life&amp;quot;) CIN: L65110H2000PLC128245, IRDAl Reg. No. 101.&lt;br />&#xd;&#xa; &lt;/span>&lt;/p>&#xd;&#xa;&lt;p> &lt;/p>&#xd;&#xa;&lt;p>Registered Office: Lodha Excelus, 13th Floor, Apollo Mills Compound, N.M. Joshi Marg, Mahalaxmi, Mumbai 400 011. ARN: INT/ST/08/23/4264&lt;/p>&#xd;&#xa;&lt;p> &lt;/p>&#xd;&#xa;"
+                footerLinks="&lt;p>&lt;span style=&quot;color: rgb(5,76,141);&quot;>&lt;a href=&quot;/content/hdfclifepath2prospermicrosite/us/en/Home.html&quot; title=&quot;hdfc-life&quot; target=&quot;_self&quot;>HDFC Life&lt;/a> | &lt;a href=&quot;/content/hdfclifepath2prospermicrosite/us/en/Home/privacy-policy.html&quot; title=&quot;privacy-policy&quot; target=&quot;_self&quot;>Privacy polic&lt;/a>y | &lt;a href=&quot;/content/hdfclifepath2prospermicrosite/us/en/Home/terms-and-conditions.html&quot; title=&quot;terms-and-conditions&quot; target=&quot;_self&quot;>Terms &amp;amp; Conditions&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                textIsRich="[true,true,true]"/>
+        </root>
+    </jcr:content>
+</jcr:root>

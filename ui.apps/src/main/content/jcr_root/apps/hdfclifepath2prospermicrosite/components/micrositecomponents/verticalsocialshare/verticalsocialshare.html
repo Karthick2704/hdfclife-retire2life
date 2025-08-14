@@ -1,0 +1,33 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+
+<section id="verticalSocialShare">
+    <!-- Social share icons -->
+    <div class="vertical-social-container">
+        <div class="vertical-socialshare">
+            <div class="vertical-copy-icon"><img src="${properties.copyHighlightIcon}"
+                    alt="${properties.copyIconAltText}" /></div>
+            <div class="vertical-copied-icon"><img src="${properties.copiedHighlightIcon}"
+                    alt="${properties.copiedIconAltText}" width="100%" /></div>
+            <a class="vertical-share-icon" target="_blank">
+                <img src="${properties.shareicon}" alt="${properties.sharealttext}">
+            </a>
+            <a class="twitterShare" target="_blank">
+                <img src="${properties.twittericon}" alt="${properties.twitteralttext}">
+            </a>
+            <a class="facebookShare" target="_blank">
+                <img src="${properties.facebookicon}" alt="${properties.facebookalttext}">
+            </a>
+            <a class="linkedinShare" target="_blank">
+                <img src="${properties.linkedinicon}" alt="${properties.linkedinalttext}">
+            </a>
+            <a class="whatsappShare" target="_blank">
+                <img src="${properties.whatsappicon}" alt="${properties.whatsappalttext}">
+            </a>
+        </div>
+    </div>
+
+</section>
+
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.sharealttext}"></sly>

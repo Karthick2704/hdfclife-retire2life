@@ -1,0 +1,258 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<div class="calci-comp" data-sly-test="${properties.piPlaceholder}">
+    <div class="mt-5 calci-container">
+        <div class="nav nav-tabs calci-tab-headings">
+            <sly data-sly-list.calciTab="${resource.children}">
+                <sly data-sly-test="${calciTab.name=='calculatorTabs'}">
+                    <sly data-sly-list.calciTabs="${calciTab.children}">
+                        <div class="calci-tab-heading ${calciTabsList.count == 1 ? 'active' : ''}">
+                            <div class="calci-tab-items">
+                                <div>
+                                    <div class="nav-item" role="presentation">
+                                        <button class="nav-link calci-nav-link active"
+                                            id="calci-tab${calciTabsList.count}"
+                                            data-bs-target="#tab${calciTabsList.count}" type="button" role="tab">
+                                            <span>${calciTabsList.count}</span>
+                                        </button>
+                                        </div>
+                                </div>
+                                <div class="calci-step-heading">${calciTabs.title @ context='attribute'}</div>
+                                
+                            </div>
+                        </div>
+                    </sly>
+                </sly>
+            </sly>
+        </div>
+    </div>
+
+    <div class=" tab-content calci-tab-content">
+        <div id="calci-tab1" class="tab-pane active">
+            <div class="calci-tabs">
+                <div class="p2p-font-32 calci-tab-title">${properties.piCalciLabelTitle @context='html'}</div>
+                <div class="calci-tab1-slide-container">
+                    <div class="calci-input-range">
+                        <div class="current-age">
+                            <label class="p2p-font-18 calci-lbl-nme">${properties.piCalciLabelNameOne}</label><br>
+                            <div class="calci-current-age-input">
+                                <input type="text" class="input-box p2p-font-18" id="current-age-box" value="${properties.piCalciInputOneMin}"
+                                    data-min="${properties.piCalciInputOneMin}"
+                                    data-max="${properties.piCalciInputOneMax}" required maxlength="2">
+                                <span class="current-age-span p2p-font-14">${properties.piPlaceholder}</span>
+                            </div>
+
+                        </div>
+                        <div class="calci-range-and-value">
+                            <input type="range" class=" calci-form-range" id="current-age-slider" value="${properties.piCalciInputOneMin}"
+                                min="${properties.piCalciInputOneMin}" max="${properties.piCalciInputOneMax}">
+                            <div class="slider-tooltip p2p-font-18"></div>
+                            <div class="calci-range-value">
+                                <span>${properties.piCalciInputOneMin}</span>
+                                <span>${properties.piCalciInputOneMax}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calci-input-range">
+                        <div class="current-age">
+                            <label class="p2p-font-18 calci-lbl-nme">${properties.piCalciLabelNameTwo}</label><br>
+                            <div class="calci-current-age-input">
+                                <input type="text" class="input-box p2p-font-18" id="retirement-age-box" value="${properties.piCalciInputTwoMin}"
+                                    data-min="${properties.piCalciInputTwoMin}"
+                                    data-max="${properties.piCalciInputTwoMax}" required maxlength="2">
+
+                                <span class="current-age-span p2p-font-14">${properties.piPlaceholder}</span>
+                            </div>
+
+
+                        </div>
+                        <div class="calci-range-and-value">
+                            <input type="range" class=" calci-form-range" id="retirement-age-slider" value="${properties.piCalciInputTwoMin}"
+                                min="${properties.piCalciInputTwoMin}" max="${properties.piCalciInputTwoMax}">
+                            <div class="slider-tooltip p2p-font-18"> </div>
+                            <div class="calci-range-value">
+                                <span>${properties.piCalciInputTwoMin}</span>
+                                <span>${properties.piCalciInputTwoMax}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="calci-tab2" class="tab-pane">
+            <div class="calci-tabs">
+                <div class="p2p-font-32 calci-tab-title">${properties.idCalciLabelTitle @context='html'}</div>
+                <div class="calci-input-box">
+                    <div class="current-age calci-tab2-annual-container">
+                        <label class="p2p-font-18 calci-lbl-nme">${properties.idCalciLabelNameOne}</label><br>
+                        <div class="calci-current-age-input">
+                            <input type="text" class="input-box p2p-font-18" id="annual-income" required data-min="" data-max=""
+                                maxlength="12">
+
+                            <span class="current-age-span p2p-font-14">${properties.idPlaceholderOne}</span>
+                        </div>
+
+
+                    </div>
+                    <div class="calci-input-range">
+                        <div class="current-age">
+                            <label class="p2p-font-18 calci-lbl-nme">${properties.idCalciLabelNameTwo}</label><br>
+                            <div class="calci-current-age-input">
+                                <input type="text" class="input-box p2p-font-18" id="income-growth-box" value="${properties.idCalciInputOneMin}"
+                                    data-min="${properties.idCalciInputOneMin}"
+                                    data-max="${properties.idCalciInputTOneMax}" required maxlength="2">
+                                <span class="current-age-span p2p-font-14">${properties.idPlaceholderTwo}</span>
+                            </div>
+
+
+                        </div>
+                        <div class="calci-range-and-value">
+                            <input type="range" class=" calci-form-range" id="income-growth-rate" value="${properties.idCalciInputOneMin}"
+                                min="${properties.idCalciInputOneMin}" max="${properties.idCalciInputTOneMax}">
+                            <div class="slider-tooltip p2p-font-18"> </div>
+                            <div class="calci-range-value">
+                                <span>${properties.idCalciInputOneMin}%</span>
+                                <span>${properties.idCalciInputTOneMax}%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="calci-tab3" class="tab-pane">
+            <div class="calci-tabs">
+                <div class="p2p-font-32 calci-tab-title">${properties.siCalciLabelTitle @context="html"}</div>
+                <div class="calci-input-box">
+                    <div class="current-age">
+                        <label class="p2p-font-18 calci-lbl-nme" id="cal-lab-name">${properties.siCalciLabelNameOne}</label><br>
+                        <div class="calci-current-age-input">
+                            <input type="text" class="input-box p2p-font-18" id="calci-current-savings" required data-min=""
+                                data-max="" maxlength="12">
+                            <span class="current-age-span p2p-font-14">${properties.siPlaceholderOne}</span>
+                        </div>
+
+
+                    </div>
+                    <div class="calci-plain-text">${properties.siDisclaimer}</div>
+                    <div class="calci-retirement-type">
+                        <div class="p2p-font-18 calci-lbl-nme">${properties.siCalciLabelNameTwo}</div>
+                        <div class="radio-group">
+                            <sly data-sly-list.calciRadio="${resource.children}">
+                                <sly data-sly-test="${calciRadio.name=='siInvestmentTypeText'}">
+                                    <sly data-sly-list.calciRadios="${calciRadio.children}">
+                                        <label class="radio">
+                                            <input type="radio" name="investment-type" class="calciInvestmentType${calciRadiosList.count}" required>
+                                            <span class="calci-rd-value p2p-font-18">${calciRadios.siInvestmentTypeText
+                                                @context="attribute"}</span>
+                                        </label>
+                                    </sly>
+                                </sly>
+                            </sly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="calci-tab4" class="tab-pane">
+            <div class="calci-tabs">
+                <div class="p2p-font-32 calci-tab-title">${properties.eCalciLabelTitle @context = 'html'}</div>
+                <div>
+                    <div class="radio-group">
+                        <label class="radio">
+                            <div class="calci-comp-tab4-radio">
+                                <div class="calci-radio-texts">
+                                    <input type="radio" name="expenseType" id="expenseRadio"
+                                        onclick="toggleInput()" required>
+                                    <span class="calci-rd-value p2p-font-18">${properties.eCalciLabelNameOne}</span>
+                                </div>
+                                <div class="calci-current-age-input calci-current-age-input-tab4" style="display: block;">
+                                    <input type="text" id="expenseInput" class="input-box p2p-font-18" 
+                                        data-min="" data-max="" maxlength="12" required>
+                                    <span class="current-age-span p2p-font-14">${properties.ePlaceholder}</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="calci-tab5" class="tab-pane">
+            <div class="calci-tab-5-innercontainer">
+                <div class="p2p-font-32 calci-tab-title"> ${properties.sCalciLabelTitle @context="html"}</div>
+
+                <div class="calci-comp-tab5-display">
+                    <div class="calci-tab5-heading p2p-font-18"> ${properties.sCalciLabelText}</div>
+
+
+                    <div class="p2p-font-18 calci-lbl-nme">${properties.sCalciLabelNameOne}</div>
+                    <div class="calci-tab5-toolip">
+                        <input type="range" class=" calci-inflation-range" id="calci-rate-of-inflation"
+                            data-min="${properties.sCalciInputOneMin}" data-max="${properties.sCalciInputOneMax}"
+                            step="0.5" value="${properties.sInflationRate}">
+                        <div class="slider-tooltip p2p-font-18 slider-tooltip-tab5"> </div>
+                        <div class="calci-summary-range-value">
+                            <span>${properties.sCalciInputOneMin}%</span>
+                            <span>${properties.sCalciInputOneMax}%</span>
+                        </div>
+                    </div>
+
+
+                    <div class="p2p-font-18 calci-lbl-nme">${properties.sCalciLabelNameTwo}</div>
+                    <div class="calci-tab5-toolip">
+                        <input type="range" class="calci-intrest-range" id="calci-intrest-rate"
+                            data-min="${properties.sCalciInputTwoMin}" data-max="${properties.sCalciInputTwoMax}"
+                            step="0.5" value="${properties.sInterestRate}">
+                        <div class="slider-tooltip p2p-font-18 slider-tooltip-tab5"> </div>
+                        <div class="calci-summary-range-value">
+                            <span>${properties.sCalciInputTwoMin}%</span>
+                            <span>${properties.sCalciInputTwoMax}%</span>
+                        </div>
+                    </div><br>
+
+
+                    <div class="calci-tab5-results">
+                        <div>
+                            <div class="p2p-font-18 calci-lbl-nme">${properties.sRetirementText @context="html"}</div>
+                            <h2 class="p2p-font-32" id="retirement-corpus">₹0</h2>
+                        </div>
+
+                        <div>
+                            <div class="p2p-font-18 calci-lbl-nme">${properties.sSavingsText @context="html"}</div>
+                            <h2 class="p2p-font-32" id="current-savings-growth">₹0</h2>
+                        </div>
+
+                        <div>
+                            <div class="p2p-font-18 calci-lbl-nme">${properties.sAdditionalText @context="html"}</div>
+                            <h2 class="p2p-font-32" id="additional-savings-needed">₹0</h2>
+                        </div>
+
+
+                    </div>
+
+                    <div>
+                        <h3 class="monthly-result p2p-font-18" id="monthly-savings-message"></h3>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <hr class="calci-comp-hr" />
+        <div class="calc-button-container">
+            <div id="btnPrevious" class="btnPrevious" style="display:none"><a class="calci-next-button"><span><img
+                            src="${properties.previousImage}" alt=""></span>${properties.sPreviousButton}</a></div>
+            <div><button id="btnNext" class="btnNext"><a class="calci-next-button">${properties.sNextButton}<span><img
+                                src="${properties.nextImage}" alt=""></span></a></button></div>
+            <div class="lastBtn" style="display:none"  data-bs-toggle="modal" data-bs-target="#myModal"><a class="calci-next-button">${properties.sPlanButton}<span><img
+                            src="${properties.nextImage}" alt=""></span></a></div>
+        </div>
+    </div>
+</div>
+
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.piPlaceholder}"></sly>

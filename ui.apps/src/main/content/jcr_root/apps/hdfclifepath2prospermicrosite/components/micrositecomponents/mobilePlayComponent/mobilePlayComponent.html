@@ -1,0 +1,35 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<section id="${properties.sectionName}" data-sly-test="${properties.mobImgAltText}">
+    <div class="mobile-outer-layer">
+
+        <div class="mobile-container">
+            <div class="p2p-font-32 mobile-heading-section">
+                ${properties.titleText @ context='html'}
+            </div>
+            <div class="p2p-font-18 mobile-content-section">
+                <p>${properties.mainContent @ context='html'}</p>
+            </div>
+            <div class="mobile-video-section">
+                <div class="mobile-video-container">
+                    <img src="${properties.mobileImage}" alt="${properties.mobImgAltText}"
+                        class="mobile-video-thumbnail" id="mobile-video-thumbnail">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Video Popup -->
+        <div class="mobile-modal" id="mobile-video-modal">
+            <div class="mobile-modal-content">
+                <span class="mobile-close" id="mobile-close-modal">&times;</span>
+                <iframe id="mobile-videoIframe" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.mobImgAltText}"></sly>

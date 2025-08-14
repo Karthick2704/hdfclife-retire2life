@@ -1,0 +1,4 @@
+{
+	"service.ranking" : "100",
+	"user.mapping" : ["hdfclife-path2prosper-microsite.core:hdfcmicrositeuser=hdfcmicrosite"]
+}

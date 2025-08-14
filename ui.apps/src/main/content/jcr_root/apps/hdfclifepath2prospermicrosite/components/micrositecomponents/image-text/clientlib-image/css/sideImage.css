@@ -1,0 +1,84 @@
+.containerimagetext {
+    margin-top: 73px;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+}
+
+.boximagetext {
+    height: 337px;
+    width: 317px;
+    margin-right: 40px; /* Space between image and text */
+}
+
+.boximagetext .textimage-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the div */
+}
+
+.labelimagetext {
+    height: 98px;
+    width: 326px;
+    font-size: 25px;
+
+}
+
+.labelimagetext p {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 25px;
+    line-height: 35px;
+    width: 100%;
+    margin-left: 60px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .containerimagetext {
+        margin-top: 40px; /* Reduce top margin on smaller screens */
+    }
+
+    .boximagetext {
+        height: 250px; /* Reduce height of the image container */
+        width: 250px; /* Reduce width of the image container */
+        margin-right: 20px; /* Reduce space between image and text */
+    }
+
+    .labelimagetext {
+    	padding-top:30px;
+        height: auto; /* Allow height to adjust based on content */
+        width: 100%; /* Take full width on smaller screens */
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .labelimagetext p{
+        font-size: 20px; /* Reduce font size */
+        line-height: 25px; /* Adjust line height */
+        margin-left: 0; /* Remove left margin */
+    	font-size:14px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .boximagetext {
+        height: 200px; /* Further reduce height of the image container */
+        width: 200px; /* Further reduce width of the image container */
+        margin-right: 0; /* Remove margin between image and text */
+        margin-bottom: 20px; /* Add space below the image */
+    }
+
+    .labelimagetext {
+    	padding-top:10px;
+     }
+
+    .labelimagetext p{
+        font-size: 14px; /* Further reduce font size */
+        line-height: 25px; /* Further adjust line height */
+        margin-top: 0; /* Reset margin-top for smaller screens */
+
+    }
+}

@@ -1,0 +1,301 @@
+amp-lightbox {
+    background: rgba(0, 0, 0, .8);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px)
+}
+
+.modalPopUp {
+    background: #fff;
+    position: relative
+}
+
+.modalPopUp .modalCloseBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 0;
+    z-index: 9999;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: 0 0
+}
+
+.scheduleCallPopUp {
+    width: 90%;
+    margin: 25px auto;
+    position: relative
+}
+
+.scheduleCallPopUp .scheduleForm {
+    padding: 35px
+}
+
+.scheduleCallPopUp .scheduleForm .formInput {
+    margin: 0
+}
+
+.scheduleCallPopUp .scheduleForm .formInput label {
+    font-size: 14px;
+    color: #233253;
+    display: block;
+    margin: 0 0 8px;
+    margin-top: 15px
+}
+
+.scheduleCallPopUp .scheduleForm .formInput input,
+.scheduleCallPopUp .scheduleForm .formInput select {
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+    color: #767676;
+    height: 38px;
+    line-height: 38px;
+    outline-style: none;
+    outline-width: 0;
+    border: 0 solid transparent;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    width: 100%;
+    padding: 0 10px
+}
+
+.scheduleCallPopUp .scheduleForm .formSubmit {
+    display: flex;
+    justify-content: center
+}
+
+.scheduleCallPopUp .scheduleForm .formSubmit button {
+    text-transform: uppercase
+}
+
+.formInput .isdcode {
+    width: 18%;
+    float: left;
+    margin-right: 5px
+}
+
+.formInput .mobilecon {
+    width: 80%
+}
+
+.scheduleCallPopUp h2 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+    color: #233253
+}
+
+.subtext {
+    font-size: 16px;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 22px;
+    text-align: center;
+    color: #8a93a5;
+    margin-bottom: 40px
+}
+
+input#isdcode {
+    width: 40px;
+    -webkit-text-fill-color: #424040;
+    opacity: .6;
+    font-style: normal
+}
+
+input#mobileNumber {
+    width: 95%
+}
+
+.custom-div .ctCkB .checkmark {
+    position: absolute;
+    top: 6px;
+    z-index: 99999;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 0
+}
+
+.ctCkB input:checked~.checkmark {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+    z-index: 99999;
+    /* margin-top: 5px; */
+}
+
+.ctCkB {
+    margin-top: 12px;
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 11px;
+    line-height: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #5a5a5a
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 3px;
+    width: 5px;
+    height: 9px;
+    border: solid #ed1c24;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.message-success {
+    color: #4bb543;
+    font-size: 12px
+}
+
+.message-fail {
+    color: #ed1c24;
+    font-size: 12px
+}
+
+input[type=text] {
+    -webkit-appearance: none;
+    border-radius: 0
+}
+
+select {
+    -webkit-appearance: none;
+    border-radius: 0;
+    background: url(https://clay.consulting/hdfclife/dev/app/images/home-images/select-arrow.png) no-repeat right 15px
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    border-radius: 0;
+    border-color: transparent
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none
+}
+
+.ctCkB input:checked~.checkmark:after {
+    display: block
+}
+
+.ctCkB .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid #ed1c24;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 99999
+}
+
+.valtext {
+    display: inline-block;
+    width: 50px;
+    text-align: center
+}
+
+.ampimgcap {
+    margin-top: 10px;
+    top: 7px;
+    cursor: pointer
+}
+
+.scheduleCallPopUp .scheduleForm .formInput input,
+.scheduleCallPopUp .scheduleForm .formInput.capchainput input[type=text] {
+    display: inline-block;
+    width: 99%
+}
+
+.font10 {
+    font-size: 10px;
+    line-height: 16px;
+    color: #999;
+    display: block;
+    padding-top: 10px
+}
+
+.scheduleForm .scroll-hold {
+    height: 500px;
+    overflow-y: scroll;
+    padding: 0 35px
+}
+
+.modalPopUp .modalCloseBtn svg {
+    width: 16px;
+    height: 16px
+}
+
+.subtext p a {
+    font-size: 14px;
+    color: #233253
+}
+
+.a-error-txt {
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #ed1c24;
+    margin-bottom: 20px
+}
+
+.a-inp {
+    display: flex
+}
+
+.ctCkB p {
+    line-height: 22px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #5a5a5a
+}
+
+button.siteButton {
+    background: #ed1c24;
+    border: 1px solid #ed1c24;
+    color: #fff;
+    padding: 9px 22px 9px 22px;
+    border-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    overflow: hidden
+}
+
+.a-sm {
+    transition: opacity .1s ease-in 0;
+    opacity: 1;
+    width: 335px;
+    height: 160px;
+    margin-left: 13px;
+    margin-top: 200px;
+    z-index: 1052
+}
+
+.a-sm .text-center {
+    text-align: center;
+    padding-right: 45px;
+    padding-top: 60px
+}

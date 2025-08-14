@@ -1,0 +1,29 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<section id="disclaimer">
+  <footer class="f-footer container-fluid" data-sly-test="${properties.footerDescription}">
+    <div class="d-flex f-footer-div">
+      <div class="f-footer-description">
+        <div>
+        ${properties.footerDescription @context='html'}
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="div-copyrights">
+         <a href="${properties.logoLink @ context='uri'}">
+          <img src="${properties.footerimage}" alt="${properties.footeralttext}">
+          </a>
+          <p>${properties.copyrightsDetails @context='html'}</p>
+        </div>
+        <div class="footer-multilinks">
+            <div style="color:rgb(0,94,158);font-weight:600;">
+            ${properties.footerLinks @context='html'}
+            </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div data-sly-resource="${'par' @ resourceType='mcm/campaign/components/parsys'}" data-sly-unwrap></div>
+</section>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.footerLinks}"></sly> 

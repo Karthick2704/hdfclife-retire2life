@@ -1,0 +1,21 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<section id="${properties.sectionName}">
+    <div class="textimage-container" data-sly-test="${properties.description}">
+        <div class="p2p-font-32 textimage-title ${properties.title && properties.serialno ? 'textimage-title-padding' : ''}">
+            <sly data-sly-test="${properties.title && properties.serialno}">
+                <span>${properties.serialno}</span><br>
+                ${properties.title}
+            </sly>
+        </div> 
+        <div class="description-image-container">
+            <span class="p2p-font-18 textimage-text">
+                ${properties.description @context='html'} 
+            </span>
+            <sly data-sly-test="${properties.imagePath}">
+                <img class="textimage-image" src="${properties.imagePath}" alt="${properties.alttext}">
+            </sly>
+        </div>
+    </div>
+</section>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.description}"></sly>

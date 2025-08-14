@@ -1,0 +1,72 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<div class="search-comp" data-sly-test="${properties.inputEmptyText}">
+    <div class="s-search-section-container mx-auto">
+        <div>
+            <h1 class="p2p-font-42 s-search-mainHeading">${properties.heading @context='html'}</h1>
+        </div>
+        <input type="hidden" value="${currentPage.path}" name="searchServletPath" id="searchServletPath" />
+        <input type="hidden" value="${properties.path}" name="projectPath" id="projectPath" />
+        <label for="formGroupExampleInput"
+            class="p2p-font-14 s-search-label-text m-3 form-label mx-auto d-flex justify-content-center">
+            ${properties.searchTitle}
+        </label>
+
+        <div class="s-input-group">
+            <span class="perform s-search-input-icon" for="product-search">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.7">
+                        <g clip-path="url(#clip0)">
+                            <path
+                                d="M6.1653 0C2.76585 0 0 2.76585 0 6.1653C0 9.56495 2.76585 12.3306 6.1653 12.3306C9.56495 12.3306 12.3306 9.56495 12.3306 6.1653C12.3306 2.76585 9.56495 0 6.1653 0ZM6.1653 11.1924C3.39339 11.1924 1.13821 8.93725 1.13821 6.16533C1.13821 3.39341 3.39339 1.13821 6.1653 1.13821C8.93722 1.13821 11.1924 3.39339 11.1924 6.1653C11.1924 8.93722 8.93722 11.1924 6.1653 11.1924Z"
+                                fill="#1E252B"></path>
+                            <path
+                                d="M13.8335 13.0287L10.5706 9.76587C10.3483 9.54354 9.9882 9.54354 9.76587 9.76587C9.54354 9.98801 9.54354 10.3485 9.76587 10.5706L13.0287 13.8335C13.1399 13.9446 13.2854 14.0002 13.4311 14.0002C13.5766 14.0002 13.7223 13.9446 13.8335 13.8335C14.0558 13.6113 14.0558 13.2509 13.8335 13.0287Z"
+                                fill="#1E252B"></path>
+                        </g>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="14" height="14" fill="white"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </span>
+
+            <input type="text" class="p2p-font-14 s-search-input-group" placeholder="${properties.placeholder}" name="searchText"
+                id="s-search-input" aria-label="Username" aria-describedby="addon-wrapping">
+            <button
+                class="p2p-font-14 perform s-search-button d-flex align-items-center justify-content-center p-2">${properties.searchButton}</button>
+
+        </div>
+
+
+
+    </div>
+
+    <div id="s-error-result" style="display: none;">
+        <p class="s-error-message" data-error="empty">${properties.inputEmptyText}</p>
+        <p class="s-error-message" data-error="invalid">${properties.specialCharText}</p>
+        <p class="s-error-message" data-error="server">An error occurred while processing your request. Please try
+            again.</p>
+    </div>
+    <div class="s-recent-searches" id="s-recent-searches">
+        <p class="p2p-font-18 d-flex align-items-center" style="display: none !important;">${properties.recentSearches} &nbsp; &nbsp; </p>
+        <ul id="s-recentListing">
+            <!-- Predefined list items for recent searches -->
+            <li class="s-recent-search-item template" style="display: none;">
+                <span class="s-search-text"></span>
+                <button class="s-remove-btn">x</button>
+            </li>
+        </ul>
+    </div>
+
+    <div id="s-result">
+
+    </div>
+    <p class="s-noResultFound" style="display:none">${properties.noResultText}</p>
+
+</div>
+
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.inputEmptyText}"></sly>

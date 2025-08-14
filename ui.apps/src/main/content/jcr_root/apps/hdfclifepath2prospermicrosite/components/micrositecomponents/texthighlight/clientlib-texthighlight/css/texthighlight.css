@@ -1,0 +1,46 @@
+
+        .texthighlight-text-container {
+            display: flex;
+    		gap:3%;
+            align-items: center;
+            width: 100%;
+            padding: 45px 50px 0px 24.6%;
+        }
+        .texthighlight-title {
+            color: #ed1c24;
+            font-size: 32px;
+            font-family: 'poppins-semibold';
+            line-height: 45px;
+
+        }
+
+
+        .texthighlight-description {
+            font-size: 18px;
+            line-height: 32px;
+            font-family: 'poppins-regular';
+        }
+
+    
+
+       @media(max-width:768px){
+            .texthighlight-text-container {
+				display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 35px 20px 0px 20px;
+        		gap: 10px;              
+            }
+            .texthighlight-title {
+				display: flex;
+                color: #ed1c24;
+                font-size: 18px;      
+                width: 100%;
+
+            }
+            .texthighlight-description {
+                font-size: 14px;
+                line-height: 24px;
+                max-width: 100%;
+            }
+}

@@ -1,0 +1,76 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-use.accordionListModel="com.hdfclife.path2prospermicrosite.core.models.AccordionListModel">
+
+    <!-- Container -->
+    <div id=" my-accordion" data-show-more="Show More" data-show-less="Show Less" class="faq-con"
+        style="position: relative;" data-sly-test="${properties.previousAlt}">
+
+
+        <div class="p2p-font-46 faqs">${properties.faqstitle @context='html'}</div>
+        <div class="faq-nav-container">
+            <!-- Tab Navigation -->
+            <div class="faq-nav-tab">
+                <div class="faq-nav-tabs">
+                    <sly data-sly-list.tabName="${resource.children}">
+                        <sly data-sly-test="${tabName.name=='accordionsMulti'}">
+                            <sly data-sly-list.tabchild="${tabName.children}">
+                                <div class="faq-nav-item" id="${tabchild.number @ context='attribute'}-tab"
+                                    data-tabnumber="${tabchild.number @ context='attribute'}">
+                                    <a class="p2p-font-18 nav-link">${tabchild.title}</a>
+                                </div>
+                            </sly>
+                        </sly>
+                    </sly>
+                </div>
+            </div>
+            <!-- Swiper Navigation Buttons -->
+            <button class="faq-button-prev"><img src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/left-arrow-blue.svg"
+                    alt="${properties.previousAlt}"></button>
+            <button class="faq-button-next"><img src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/right-arrow-blue.svg"
+                    alt="${properties.nextAlt}"></button>
+
+        </div>
+
+
+        <!-- Tab 1: Personal Information -->
+        <sly data-sly-list.accordion="${accordionListModel.accordionList}">
+            <div id="${accordion.title}" class="faq-tab-content" style="display:none;">
+                <sly data-sly-list.bullet="${accordion.bulletPointList}">
+                    <div class="faq-accordion-item">
+                        <div class="faq-vertical-line"></div>
+
+                        <div class="faq-accordion-header" onclick="toggleAccordion(this)">
+                            <div class="p2p-font-18 faqs-title-header">
+                                <div>
+                                    <span class="faq-counter">${bullet.number}</span>
+                                </div>
+                                ${bullet.question}
+                            </div>
+                            <div class="faqs-arrow-img">
+                                <img src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/faq-dropdown.svg" alt="Arrow">
+                            </div>
+                        </div>
+                        <div class="p2p-font-18 faq-accordion-content">
+                            ${bullet.answer @context='html'}
+                        </div>
+                    </div>
+                </sly>
+                
+                <!-- Unique button with dynamic data-target -->
+                <button class="p2p-font-18 faq-button" id="show-more-${accordion.title}" data-target="${accordion.title}"
+                    data-show-more="${accordion.viewAll}" data-show-less="${accordion.viewLess}"
+                    data-show-more-icon="${accordion.iconFileReferenceViewAll}"
+                    data-show-less-icon="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/faq-viewmore.svg"
+                    data-show-more-icon-alt="${accordion.viewAllIconAltText}"
+                    data-show-less-icon-alt="${accordion.viewLessIconAltText}">
+                    ${accordion.viewAll}
+                    <img src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/faq-viewmore.svg" alt="${accordion.viewAllIconAltText}">
+                </button>
+
+            </div>
+        </sly>
+
+    </div>
+</sly>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.previousAlt}"></sly>

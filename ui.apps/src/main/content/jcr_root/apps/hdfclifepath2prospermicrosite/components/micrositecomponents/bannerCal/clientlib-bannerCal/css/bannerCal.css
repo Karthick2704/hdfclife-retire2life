@@ -1,0 +1,49 @@
+.cmp-link__screen-reader-only {
+    display: none;
+}
+.calci-banner-container {
+    background-color: #F2F0F0;
+    padding: 30px 50px;
+
+}
+ 
+.calci-banner-title {
+    color: #ED1C24;
+    font-size: 42px;
+    font-weight: 600;
+    font-family: 'poppins-semibold';        
+    margin: 0;
+}
+ 
+.calci-banner-description {
+    
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 1.6;
+    font-family: 'poppins-regular';
+    color: #000000;
+}
+
+ @media (max-width: 768px){
+.calci-banner-title {
+    color: #ED1C24;
+    font-size: 20px;
+    font-family: 'poppins-semibold';
+           font-weight: 600;
+    margin: 0;
+}
+.calci-banner-description {
+    color: #333;
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: 'poppins-regular';
+}
+.calci-banner-container {
+    background-color: #F2F0F0;
+    padding: 30px 20px;
+
+}
+ }
+ 

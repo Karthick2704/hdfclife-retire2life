@@ -1,0 +1,650 @@
+.mediahub .columncontrol-filter-background {
+	 height: 250px;
+	 width: 100%;
+	 display: block;
+	 position: relative;
+	 overflow: hidden;
+	 border-bottom: 10px solid #ed1c24;
+}
+ .mediahub .desktop-image {
+	 width: 100%;
+	 height: 100%;
+	 object-fit: cover;
+}
+ .mediahub .mobile-image {
+	 display: none;
+}
+ .mediahub .columncontrol-filter-tab {
+	 border-top-right-radius: 10px;
+	 padding-bottom: 25px;
+	 background-color: #ed1c24;
+	 position: absolute;
+	 bottom: 0px;
+}
+ .mediahub .section-background {
+	 background-color: white;
+	 position: relative;
+	 width: 100%;
+     padding-top: 50px;
+}
+ .mediahub .section-background::before {
+	 content: "";
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 85%;
+	 background-color: #f2f0f0;
+	 z-index: -1;
+}
+ .mediahub .mediafilter-container {
+	 margin: 0 auto;
+	 padding: 50px;
+	 position: relative;
+}
+ .mediahub .mediahub-header {
+	 color: white;
+	 font-size: 46px;
+	 margin: 10px 15px 10px 50px;
+	 font-weight: bold;
+}
+ .mediahub .card {
+	 height: 100%;
+	 background-color: #fff;
+	 border: 2px solid #00000030;
+	 border-radius: 0px;
+	 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	 position: relative;
+	 padding: 0px;
+}
+ .mediahub .image {
+	 width: 100%;
+	 height: 250px;
+	 object-fit: cover;
+	 display: block;
+}
+ .mediahub .card-content {
+	 border-top: 2px solid #00000030;
+}
+ .mediahub .meta {
+	 display: flex;
+	 flex-direction: row;
+	 align-items: center;
+	 font-size: 12px;
+	 color: #ed1c24;
+	 margin-bottom: 10px;
+	 border-bottom: 2px solid #00000030;
+	 height: 35px;
+}
+ .mediahub .media-title-description {
+	 padding: 0px 10px 10px;
+}
+ .mediahub .meta .dot {
+	 color: #ff3737;
+	 margin: 0 5px;
+}
+ .mediahub .meta img {
+	 height: 14px;
+	 width: 14px;
+	 margin-right: 5px;
+}
+ .mediahub .meta .share-section .share-icon img {
+	 margin-right: 0;
+}
+ .mediahub .meta .type, .mediahub .meta .read-time {
+	 color: #ed1c24;
+}
+ .mediahub .meta .type {
+	 margin: 0;
+	 font-size: 12px;
+	 width: 150px;
+	 overflow: hidden;
+	 white-space: nowrap;
+	 text-overflow: ellipsis;
+}
+ .mediahub .meta .read-time {
+	 font-style: italic;
+	 font-weight: 300;
+	 font-size: 12px;
+}
+ .mediahub .date-info {
+	 border-right: 2px solid #00000030;
+	 width: 45%;
+	 height: 100%;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ .mediahub .vertical-line {
+	 margin: 0;
+	 width: 0.5px;
+	 height: 23px;
+	 background: gray;
+}
+ .mediahub .share-icon {
+	 background-size: cover;
+	 width: 100%;
+	 height: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 left: 16px;
+}
+ .mediahub .share-popup {
+	 display: none;
+	 position: absolute;
+	 top: 60px;
+	 right: 0;
+	 padding: 5px;
+	 border-radius: 5px;
+	 z-index: 10;
+}
+ .mediahub .share-popup.active {
+	 display: block;
+}
+ .mediahub .twitterlogo img {
+	 width: 26px;
+	 height: 40px;
+	 object-fit: contain;
+}
+ .mediahub .facebooklogo img {
+	 width: 26px;
+	 height: 40px;
+	 object-fit: contain;
+}
+ .mediahub .meta .linkedinlogo img {
+	 width: 26px;
+	 height: 40px;
+	 object-fit: contain;
+}
+ .mediahub .meta .whatsapplogo img {
+	 width: 26px;
+	 height: 40px;
+	 object-fit: contain;
+}
+ .mediahub .share-popup a:hover {
+	 color: #ed1c24;
+}
+ .mediahub .title {
+	 font-size: 18px;
+	 font-weight: bolder;
+	 color: #ed1c24;
+	 margin-top: 10px;
+	 text-decoration: none;
+}
+ .mediahub .title div {
+	 padding: 0px 10px 10px 10px;
+}
+ .mediahub .title:hover {
+	 text-decoration: underline;
+}
+ .mediahub .blog-meta {
+	 display: flex;
+	 align-items: center;
+	 justify-content: flex-start;
+	 padding-left: 10px;
+	 width: 55%;
+	 border-right: 2px solid #00000030;
+	 height: 100%;
+}
+ .mediahub .blog-meta div {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 height: 100%;
+}
+ .mediahub .date {
+	 display: flex;
+	 align-items: center;
+	 color: #666;
+}
+ .mediahub .share-section {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 cursor: pointer;
+	 width: 10%;
+	 height: 100%;
+	 background-color: #f2f0f0;
+}
+ .mediahub .mb-4 {
+	 display: none;
+}
+ .mediahub .text-center {
+	 color: red;
+	 border-radius: 5px;
+}
+ .mediahub .buttonloadmore {
+	 background-color: #ed1c24;
+	 border: none;
+	 border-radius: 20px;
+	 font-family: Poppins, sans-serif;
+	 font-size: 14px;
+	 height: 30px;
+	 width: 108px;
+	 color: white;
+	 display: inline-block;
+	 margin: 0 auto;
+	 text-align: center;
+}
+ .mediahub .filter-container {
+	 display: flex;
+	 gap: 10px;
+	 height: 43%;
+	 margin-left: 50px;
+	 flex-wrap: wrap;
+	 justify-content: flex-start;
+}
+ .mediahub .filter-button {
+	 background: transparent;
+	 display: flex;
+	 align-items: center;
+	 padding-right: 15px;
+	 border: none;
+	 cursor: pointer;
+	 transition: background-color 0.3s, color 0.3s;
+	 color: #fff;
+	 font-size: 30px;
+}
+ .mediahub .filter-container .filter-tab-icon {
+	 margin-right: 8px;
+	 width: 32px;
+	 height: 32px;
+}
+.mediahub .filter-div:hover{
+     text-decoration: underline;
+}
+.mediahub .filter-button:first-child:hover{
+     text-decoration: underline;
+}
+ .mediahub .filter-button span {
+	 margin-left: 4px;
+	 font-weight: bold;
+}
+ .mediahub .filter-button:focus {
+	 text-decoration: underline;
+}
+ .mediahub .cmp-link__screen-reader-only {
+	 display: none;
+}
+ @media (max-width: 1200px) {
+	 .mediahub .filter-button[data-filter="all"] {
+		 font-size: 30px;
+	}
+	 .mediahub .filter-button[data-filter="article"] {
+		 font-size: 30px;
+	}
+	 .mediahub .filter-button[data-filter="podcast"] {
+		 font-size: 30px;
+	}
+	 .mediahub .filter-button[data-filter="video"] {
+		 font-size: 30px;
+	}
+	 .mediahub .filter-button[data-filter="infographic"] {
+		 font-size: 30px;
+	}
+	 .mediahub .filter-container.filter-tab-icon {
+		 margin-right: 8px;
+		 width: 26px;
+		 height: 26px;
+	}
+	 .mediahub .columncontrol-filter-tab {
+		 background-color: #ed1c24;
+		 width: 75%;
+		 position: absolute;
+		 bottom: 0px;
+	}
+ .mediahub .meta .type {
+	 margin: 0;
+	 font-size: 12px;
+	 width: 130px;
+	 overflow: hidden;
+	 white-space: nowrap;
+	 text-overflow: ellipsis;
+}
+}
+ @media (max-width: 1024px) {
+	 .mediahub .filter-button[data-filter="all"] {
+		 font-size: 26px;
+	}
+	 .mediahub .filter-button[data-filter="article"] {
+		 font-size: 26px;
+	}
+	 .mediahub .filter-button[data-filter="podcast"] {
+		 font-size: 26px;
+	}
+	 .mediahub .filter-button[data-filter="video"] {
+		 font-size: 26px;
+	}
+	 .mediahub .filter-button[data-filter="infographic"] {
+		 font-size: 26px;
+	}
+	 .mediahub .filter-container .filter-tab-icon {
+		 margin-right: 4px;
+		 width: 26px;
+		 height: 26px;
+	}
+.mediahub .meta .type {
+	 margin: 0;
+	 font-size: 12px;
+	 width: 110px;
+	 overflow: hidden;
+	 white-space: nowrap;
+	 text-overflow: ellipsis;
+}
+}
+@media (max-width: 991px){
+		.mediahub .meta .type {
+	 	margin: 0;
+	 	font-size: 12px;
+		width: 140px;
+	 	overflow: hidden;
+	 	white-space: nowrap;
+	 	text-overflow: ellipsis;
+}
+
+}
+ @media (max-width: 954px) {
+	 .mediahub .mediahub-header {
+		 color: white;
+		 font-size: 40px;
+		 font-weight: bold;
+		 margin-left: 50px;
+	}
+	 .mediahub .columncontrol-filter-tab {
+		 background-color: #ed1c24;
+		 width: 80%;
+		 position: absolute;
+		 bottom: 0px;
+	}
+	 .mediahub .filter-container {
+		 gap: 0px;
+		 display: flex;
+		 height: 43%;
+		 width: 100%;
+		 margin-left: 50px;
+		 flex-wrap: wrap;
+		 justify-content: flex-start;
+	}
+	 .mediahub .filter-container .filter-tab-icon {
+		 margin-right: 4px;
+		 width: 24px;
+		 height: 24px;
+	}
+
+}
+ @media (max-width: 900px) {
+	 .mediahub .columncontrol-filter-tab {
+		 background-color: #ed1c24;
+		 width: 85%;
+		 position: absolute;
+		 bottom: 0px;
+	}
+	 .mediahub .filter-container {
+		 gap: 0px;
+		 display: flex;
+		 height: 43%;
+		 width: 100%;
+		 margin-left: 50px;
+		 flex-wrap: wrap;
+		 justify-content: flex-start;
+	}
+}
+ @media (max-width: 800px) {
+	 .mediahub .filter-container {
+		 margin-top: 6px;
+		 display: flex;
+		 height: 43%;
+		 width: 100%;
+		 margin-left: 10px;
+		 flex-wrap: wrap;
+		 justify-content: flex-start;
+	}
+	 .mediahub .mediahub-header {
+		 color: white;
+		 font-size: 34px;
+		 font-weight: bold;
+		 margin-left: 20px;
+	}
+	 .mediahub .filter-button {
+		 background: transparent;
+		 display: flex;
+		 align-items: center;
+		 padding: 10px;
+		 border: none;
+		 cursor: pointer;
+		 transition: background-color 0.3s, color 0.3s;
+		 color: #fff;
+	}
+	 .mediahub .columncontrol-filter-tab {
+		 background-color: #ed1c24;
+		 width: 84%;
+		 position: absolute;
+		 bottom: 0px;
+	}
+	 .mediahub .filter-button[data-filter="all"] {
+		 font-size: 20px;
+	}
+	 .mediahub .filter-button[data-filter="article"] {
+		 font-size: 20px;
+	}
+	 .mediahub .filter-button[data-filter="podcast"] {
+		 font-size: 20px;
+	}
+	 .mediahub .filter-button[data-filter="video"] {
+		 font-size: 20px;
+	}
+	 .mediahub .filter-button[data-filter="infographic"] {
+		 font-size: 20px;
+	}
+	 .mediahub .filter-container .filter-tab-icon {
+		 margin-right: 4px;
+		 width: 25px;
+		 height: 25px;
+	}
+	.mediahub .meta .type {
+        margin: 0;
+        font-size: 12px;
+        width: 145px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+@media (max-width: 768px) {
+	   .mediahub .title{
+		font-size: 14px;
+	   }
+}
+ @media (max-width: 720px) {
+	 .mediahub .columncontrol-filter-tab {
+		 background-color: #ed1c24;
+		 width: 84%;
+		 position: absolute;
+		 bottom: 0px;
+	}
+    .mediahub .meta .type {
+        margin: 0;
+        font-size: 12px;
+        width: 190px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+}
+@media (max-width: 500px){
+	  .mediahub .meta .type {
+        margin: 0;
+        font-size: 12px;
+        width: 170px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+}
+
+ @media (max-width: 475px) {
+	 .mediahub .desktop-image {
+		 display: none !important;
+	}
+	 .mediahub .mobile-image {
+		 display: block !important;
+		 width: 100%;
+		 height: 50%;
+		 object-fit: cover;
+		 object-position: center;
+		 position: relative;
+	}
+	 .mediahub .columncontrol-filter-background img {
+		 width: 100%;
+		 height: 45vw;
+    	 object-fit:cover;
+		 display: block;
+	}
+	 .mediahub .columncontrol-filter-tab {
+		 
+		 background-color: #ed1c24;
+		 width: 100%;
+		 position: absolute;
+		 bottom: 0;
+		 border-top-right-radius: 20px;
+		 border-top-left-radius: 20px;
+		 padding: 20px;
+	}
+	 .mediahub .columncontrol-filter-background {
+		 min-height: 270px;
+		 width: 100%;
+		 display: block;
+		 position: relative;
+		 border-bottom: 0;
+	}
+		 .mediahub .filter-button[data-filter="all"] {
+		 font-size: 16px;
+	}
+	 .mediahub .filter-button[data-filter="article"] {
+		 font-size: 16px;
+	}
+	 .mediahub .filter-button[data-filter="podcast"] {
+		 font-size: 16px;
+	}
+	 .mediahub .filter-button[data-filter="video"] {
+		 font-size: 16px;
+	}
+	 .mediahub .filter-button[data-filter="infographic"] {
+		 font-size: 16px;
+	}
+	 .mediahub .filter-container {
+		 margin-top: 18px;
+		 display: flex;
+		 height: 43%;
+		 width: 100%;
+		 margin: 0;
+		 flex-wrap: wrap;
+		 justify-content: flex-start;
+		 padding: 15px 0 0;
+		 gap: 10px;
+	}
+	.mediahub .filter-button {
+		padding: 0;
+	}
+	 .mediahub .mediahub-header {
+		 font-size: 24px;
+		 margin: 0;
+	}
+	.mediahub .section-background{
+		padding-top:0px;
+	}
+	.mediahub .mediafilter-container{
+		padding: 30px 20px;
+	}
+	     .mediahub .filter-container .filter-tab-icon {
+		 margin-right: 4px;
+		 width: 20px;
+		 height: 20px;
+	}
+  .mediahub .meta .type {
+        margin: 0;
+        font-size: 12px;
+        width: 130px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+@media (max-width: 375px){
+	.mediahub .meta .type{
+		width: 130px;
+    }
+
+        .mediahub .columncontrol-filter-background img {
+        width: 100%;
+        height: 43vw;
+        object-fit: cover;
+    }
+    .mediahub .meta .type {
+        margin: 0;
+        font-size: 12px;
+        width: 120px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+}
+
+ @media (max-width: 320px) {
+	 .mediahub .mediahub-header {
+		 color: white;
+		 font-size: 22px;
+		 font-weight: bold;
+		 margin: 10px 0px 0px 0px;
+	}
+	 .mediahub .filter-container .filter-tab-icon {
+		 margin-right: 5px;
+		 width: 17px;
+		 height: 17px;
+	}
+	 .mediahub .filter-button[data-filter="all"] {
+		 font-size: 14px;
+	}
+	 .mediahub .filter-button[data-filter="article"] {
+		 font-size: 14px;
+	}
+	 .mediahub .filter-button[data-filter="podcast"] {
+		 font-size: 14px;
+	}
+	 .mediahub .filter-button[data-filter="video"] {
+		 font-size: 14px;
+	}
+	 .mediahub .filter-button[data-filter="infographic"] {
+		 font-size: 14px;
+	}
+	 .mediahub .filter-container .filter-tab-icon {
+		 margin-right: 4px;
+		 width: 25px;
+		 height: 25px;
+	}
+	 .mediahub .columncontrol-filter-tab {
+		 background-color: #ed1c24;
+		 width: 100%;
+		 position: absolute;
+	}
+	 .mediahub .filter-container .filter-tab-icon {
+		 margin-right: 2px;
+		 width: 20px;
+		 height: 20px;
+	}
+	.mediahub .meta .type{
+		 width: 120px;
+	}
+ 	.mediahub .meta .type {
+        margin: 0;
+        font-size: 12px;
+        width: 110px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}

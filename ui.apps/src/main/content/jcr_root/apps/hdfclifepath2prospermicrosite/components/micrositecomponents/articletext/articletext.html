@@ -1,0 +1,20 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<section id="${properties.sectionName}"> 
+    <div class="articletext-con ${properties.isMarginTop ? 'articletext-margin' : ''}">
+        <div class="article-title-con">
+            <div>${properties.serialno}</div>
+            <div class="serialno-con">
+                <h3 class="p2p-font-32">${properties.title}<h3>
+            </div>
+    
+        </div>
+        <div class="article-description-con p2p-font-18">
+        ${properties.description @context='html'}
+        <div data-sly-resource="${@path='par', resourceType='wcm/foundation/components/parsys'}"></div>
+       </div>       
+
+    </div>
+</section>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.description}"></sly>

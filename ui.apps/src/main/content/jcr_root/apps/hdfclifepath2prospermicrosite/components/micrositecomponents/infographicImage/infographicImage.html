@@ -1,0 +1,34 @@
+
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<section id="${properties.sectionName}"> 
+    <div data-sly-test="${properties.toggleImage == 'leftimage'}">
+        <div  class="image-container" style="display: flex;justify-content:flex-start;margin-top:50px;">
+            <div style="width: ${properties.iconWidth @context='attribute'}%;">
+                <img src="${properties.iconFileReference}" alt="${properties.iconAltText}" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+    
+    
+    <div data-sly-test="${properties.toggleImage == 'rightimage'}">
+        <div  class="image-container" style="display: flex;justify-content:end;margin-top:50px;">
+            <div style="width:  ${properties.iconWidth @context='attribute'}%;">
+                <img src="${properties.iconFileReference}" alt="${properties.iconAltText}" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+    
+    <div data-sly-test="${properties.toggleImage == 'centerimage'}">
+        <div  class="image-container" style="display: flex;justify-content:center;margin-top:50px;">
+            <div style="width:  ${properties.iconWidth @context='attribute'}%;">
+                <img src="${properties.iconFileReference}" alt="${properties.iconAltText}" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.iconAltText}"></sly>
+
+

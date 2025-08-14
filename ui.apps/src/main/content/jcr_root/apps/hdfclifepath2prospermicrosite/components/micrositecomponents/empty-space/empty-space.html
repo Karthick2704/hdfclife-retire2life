@@ -1,0 +1,24 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<style>
+
+.desktop-empty-space-div{
+    display:block;
+}
+.mobile-empty-space-div{
+    display:none;
+}
+
+@media (max-width:768px){
+	.desktop-empty-space-div{
+    	display:none;
+    }
+    .mobile-empty-space-div{
+    	display:block;
+    }
+}
+</style>
+<div class="desktop-empty-space-div" style="height:${properties.desktopDivHeight @context='attribute'}px"></div>
+<div class="mobile-empty-space-div" style="height:${properties.mobileDivHeight @context='attribute'}px"></div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.width}"></sly>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    allowProxy="{Boolean}true"
+    categories="[hdfclifepath2prospermicrosite.microsite]"
+    dependencies="[hdfclifepath2prospermicrosite.dependencies,granite.csrf.standalone]"
+    embed="[pathtoprosper.headerComponent,pathtoprosper.calculator,pathtoprosper.banner,pathtoprosper.verticalsocialshare,pathtoprosper.socialShareComponent,pathtoprosper.blogComponentClientlibs,pathtoprosper.videoComponent,pathtoprosper.carousel,pathtoprosper.schedule-a-call,pathtoprosper.articletab,pathtoprosper.articletext,pathtoprosper.bannerCal,pathtoprosper.breadcrumb,pathtoprosper.carouselMenu,pathtoprosper.contentLinkBlockComponent,pathtoprosper.descriptionimage,pathtoprosper.disclaimer,pathtoprosper.faq,pathtoprosper.footer,pathtoprosper.icontext,pathtoprosper.sideImageComponent,pathtoprosper.imageTextComponent,pathtoprosper.mediaFile,pathtoprosper.mediaFilter,pathtoprosper.mobilePlay,pathtoprosper.picturetextblock,pathtoprosper.podcastsAudio,pathtoprosper.properityPathIntro,pathtoprosper.search,pathtoprosper.tag,pathtoprosper.texthighlight,pathtoprosper.podcastsVideo]"/>

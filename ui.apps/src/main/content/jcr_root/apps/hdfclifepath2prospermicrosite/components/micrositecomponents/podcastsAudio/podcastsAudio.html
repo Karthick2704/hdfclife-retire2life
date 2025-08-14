@@ -1,0 +1,42 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<sly data-sly-use.model="com.hdfclife.path2prospermicrosite.core.models.PodcastsAudioModel" />
+
+<section id="${properties.sectionName}">
+    <div class="podcast-container" data-sly-test="${properties.podcastImage}">
+        <div class="podcast-header">
+            <!-- Image will be dynamically updated based on the current episode -->
+            <img id="podcastImage" src="${properties.podcastImage}" alt="${properties.altTextPodcastImage}">
+            <div class="podcast-audio-player">
+                <div class="podcast-audio-controls">
+                    <img src="${properties.rewindImage}" alt="${properties.altTextRewindButtonImage}" class="rewind"
+                        onclick="rewindAudio()">
+                    <img id="podcast-playPauseButton" class="podcast-playPauseButton"
+                        data-play-src="${properties.playButton}" data-pause-src="${properties.pauseImage}"
+                        src="${properties.playButton}" alt="Play Button" onclick="playPauseAudio()">
+                    <img src="${properties.forwardImage}" alt="${properties.altTextForwardButtonImage}" class="forward"
+                        onclick="forwardAudio()">
+                </div>
+                <canvas id="podcast-waveform"></canvas>
+            </div>
+        </div>
+
+        <div class="podcast-episodes">
+            <sly data-sly-list.sectionOne="${model.sectionOneBrandDetails}">
+                <div class="podcast-episode">
+                    <h3 class="p2p-font-32">${sectionOne.title}</h3>
+                    ${sectionOne.podcastDescription @context='html'}
+                    <div class="episode-details">
+                        <button class="podcast-play-button" data-audio-src="${sectionOne.audio}"
+                            data-image-src="${sectionOne.episodeImage}" onclick="playAudio(this)">▶ PLAY
+                        </button>
+                        <span class="podcast-duration">${sectionOne.timeDuration}</span>
+                    </div>
+                </div>
+                <hr class="podcast-hr">
+            </sly>
+        </div>
+    </div>
+
+</section>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.timeDuration}"></sly>

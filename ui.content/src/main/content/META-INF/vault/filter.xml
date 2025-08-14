@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/hdfclifepath2prospermicrosite" mode="merge"/>
+    <!-- <filter root="/content/hdfclifepath2prospermicrosite" mode="merge"/> -->
+    <filter root="/content/dam/hdfclifepath2prospermicrosite" mode="merge">
+        <exclude pattern="/content/dam/hdfclifepath2prospermicrosite(/.*)?"/>
+        <include pattern="/content/dam/hdfclifepath2prospermicrosite/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/hdfclifepath2prospermicrosite/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/hdfclifepath2prospermicrosite" mode="merge"/>
+</workspaceFilter>

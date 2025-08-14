@@ -1,0 +1,6 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+  <div data-sly-test="${properties.horIcon}" class="image-div">
+    
+    <img src="${properties.verIcon}" class="image-ver-image" alt="${properties.verIconAltText}" />
+  </div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.horIconAltText}"></sly>

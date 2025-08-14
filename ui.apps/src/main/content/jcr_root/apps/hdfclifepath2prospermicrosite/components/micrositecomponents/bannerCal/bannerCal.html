@@ -1,0 +1,13 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<section id="${properties.sectionName}">
+    <div class="calci-banner-container" data-sly-test="${properties.retirementCalculatorTitle}">
+    
+        <h1 class="p2p-font-46 calci-banner-title">${properties.retirementCalculatorTitle}</h1>
+          <div class="calci-banner-description" >
+            ${properties.description @context='html'}
+          </div>
+    </div>
+</section>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.description}"></sly> 

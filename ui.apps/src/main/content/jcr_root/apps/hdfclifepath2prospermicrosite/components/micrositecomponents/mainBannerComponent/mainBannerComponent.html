@@ -1,0 +1,54 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<section id="${properties.sectionName}">
+    <div class="banner-wrapper ${properties.isBanner ? '' : 'margin-btm'}">
+        
+        <div class="banner-con">
+            <div class="bannerimage">
+                
+                <img class="desktop-view-image ${properties.isBanner ? 'main-banner-image' : ''}" src="${properties.backgroundImagePath ? properties.backgroundImagePath : pageProperties.backgroundImagePath}" alt="${properties.bannerAltText ? properties.bannerAltText : pageProperties.bannerAltText}">
+                <img class="mobile-view-image ${properties.isBanner ? 'main-banner-image' : ''}" src="${properties.mobileBackgroundImagePath ? properties.mobileBackgroundImagePath : pageProperties.mobileBackgroundImagePath}"  alt="${properties.mobileImageAltText ? properties.mobileImageAltText : pageProperties.mobileImageAltText}">
+    
+                <div class="${properties.isBanner ? 'banner-display' : 'main-banner-display'} banner-title ">
+                    <div class="banner-time-text" data-sly-test = "${properties.iconAltText}">            
+                            <img class="banner-article-icon" style="width:18px; height:18px;" src="${properties.bannerIcon ? properties.bannerIcon : pageProperties.bannerIcon}"
+                                alt="${properties.iconAltText}">                                 
+                                
+                            <sly data-sly-test = "${pageProperties.readtime && !properties.bannerIconText }">                    
+                                <div class="banner-icon-text"><span class="poppins-bold text-capitalize">${pageProperties.articletype} • </span><i>${pageProperties.readtime  @ context='html'}</i></div>
+                            </sly>
+                            <sly data-sly-test = "${properties.bannerIconText}">                    
+                                <div class="banner-icon-text">${properties.bannerIconText @ context='html'}</div>
+                            </sly>                        
+                    </div>         
+                    <div class="banner-title-container">
+                        <div class="banner-title-h1">${properties.bannerContent ? properties.bannerContent : pageProperties.articleheading @ context='html'}</div>
+                        <div class="banner-title-h2">${properties.bannerSubContent ? properties.bannerSubContent : pageProperties.articledesc @ context='html'}</div>
+                    </div>
+                </div>
+                <div class="main-banner-text ${properties.isBanner ? 'main-banner-display' : 'banner-display'}" style="width:${properties.conWidth @context='html'}">
+                    ${properties.mainBannerText @context='html'}
+                </div>
+                <div class="banner-line"></div>
+            </div>        
+            <div class="banner-mobile-view-title ${properties.isBanner ? 'banner-display' : ''}">
+                <div class="banner-mobile-time-text" data-sly-test = "${properties.iconAltText}">                    
+                    <img class="banner-article-icon" style="width:18px; height:18px;" src="${properties.bannerIcon ? properties.bannerIcon : pageProperties.bannerIcon}" alt="${properties.iconAltText}">                                 
+                        <sly data-sly-test = "${pageProperties.readtime && !properties.bannerIconText }">                    
+                            <div class="banner-icon-text"><span class="poppins-bold text-capitalize">${pageProperties.articletype} • </span><i>${pageProperties.readtime  @ context='html'}</i></div>
+                        </sly>
+                        <sly data-sly-test = "${properties.bannerIconText}">                    
+                            <div class="banner-icon-text">${properties.bannerIconText @ context='html'}</div>
+                        </sly>
+                </div>               
+                <div class="banner-title-container">
+                    <div class="banner-title-h1">${properties.bannerContent ? properties.bannerContent : pageProperties.articleheading @ context='html'}</div>
+                    <div class="banner-title-h2">${properties.bannerSubContent ? properties.bannerSubContent : pageProperties.articledesc @ context='html'}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.mobileImageAltText}"></sly>  
+

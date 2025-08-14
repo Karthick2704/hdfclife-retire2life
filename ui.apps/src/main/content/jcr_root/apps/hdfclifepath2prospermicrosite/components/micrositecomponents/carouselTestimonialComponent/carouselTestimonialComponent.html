@@ -1,0 +1,51 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-use.model="com.hdfclife.path2prospermicrosite.core.models.CarouselTestimonialsAlter" />
+
+
+<section id="${properties.sectionName}">
+    <div class="testimonial-car-body">
+        <div class="p2p-font-42 testimonial-car-heading">
+            ${properties.innerDescription03 @ context='html'}
+        </div>
+    
+        <div class="p2p-font-18 testimonial-car-slider-container">
+    
+            <div class="swiper-container testimonial-swiper-container">
+                <div class="swiper-wrapper testimonial-swiper-wrapper">
+                    <sly data-sly-list.sectionOne="${model.sectionOneBrandDetails}">
+                        <div class="swiper-slide testimonial-car-slide">
+                            <div class="testimonial-car-container">
+                                <div class="p2p-font-18 testimonial-car-quote">
+                                    <div>
+                                        <img class="testimonial-car-quotation" src="${sectionOne.quoteImageFileReference}" alt="${sectionOne.quoteAltText}" />
+                                    </div>
+                                    <div class="testimonial-car-quote-img">
+                                        <div class="testimonialcar-richtext">${sectionOne.mainContent @ context='html'}</div>
+                                        <div class="testimonial-car-author-section">
+                                            <img src="${sectionOne.imageFileReference}" alt="${sectionOne.altText @ context='html'}" class="testimonial-car-author-image" />
+                                            <div class="testimonial-car-author-Name">
+                                                <p class="p2p-font-18 poppins-bold">${sectionOne.subContentOne @ context='html'}</p>
+                                                <div class="testimonial-car-author-info">
+                                                   <p class="p2p-font-14 poppins-semibold">${sectionOne.subContentTwo @ context='html'}</p>
+                                                   <p class="p2p-font-14 poppins-regular">${sectionOne.subContentThree @ context='html'}</p>
+                                                </div>
+                                            </div> 
+                                       </div>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </sly>
+                </div>
+                <div style="display: flex; width: max-content; margin: auto; margin-top: 35px; gap:60px;">
+                <div class="swiper-button-prev testimonial-button-prev"><img class="testimonial-car-arrows" src="${properties.leftArrowImageFileReference}" alt="${properties.leftArrowAltText}"></div>
+                <div class="testimonial-car-indicators swiper-pagination"></div>
+                <div class="swiper-button-next testimonial-button-next"><img class="testimonial-car-arrows" src="${properties.rightArrowImageFileReference}" alt="${properties.rightArrowAltText}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.quoteAltText}"></sly>

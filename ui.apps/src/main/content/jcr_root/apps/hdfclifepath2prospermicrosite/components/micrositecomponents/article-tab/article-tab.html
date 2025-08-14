@@ -1,0 +1,121 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-use.model="com.hdfclife.path2prospermicrosite.core.models.HDFCPillarModel" />
+
+<div class="tc-vertical-tabs pillars" style="background-color:${properties.initialbgcolor @context = 'styleString'}">
+    <!-- Tab Menu -->
+
+    <div class="tc-tab-menu">
+        <sly data-sly-list.tabName="${resource.children}">
+            <sly data-sly-test="${tabName.name == 'sectionOneBrandDetails'}">
+                <sly data-sly-list.tabChild="${tabName.children}">
+                    <div class="tc-tab-item ${tabChildList.count == 2 ? 'active' : ''} ${tabChildList.count == 1 ? 'active-br-btm' : ''} ${tabChildList.count == 3 ? 'active-br-tp' : ''}"
+                        data-tab="tab${tabChildList.count}" data-color="${tabChild.bgcolor}"
+                        style="background-color:${tabChild.bgcolor @context = 'styleString'}">
+                        <p data-color="${tabChild.parabgcolor}" class="tc-paracolor"> ${tabChild.headerText}</p>
+                    </div>
+                </sly>
+            </sly>
+        </sly>
+    </div>
+    <div class="tc-tabmenu-button-next"><img
+            src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/carousel-btn-white.svg"
+            alt="img"></div>
+    <div class="tc-tabmenu-button-prev"><img
+            src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/tab-leftarrow-mobile.svg"
+            alt="img"></div>
+
+
+    <!-- Tab Content -->
+    <div class="tc-tab-content">
+        <sly data-sly-list.tabName="${resource.children}">
+            <sly data-sly-test="${tabName.name == 'sectionOneBrandDetails'}">
+                <sly data-sly-list.tabChild="${tabName.children}">
+                    <div id="tab${tabChildList.count}" class="tc-tab-pane  ${tabChildList.count == 2 ? 'active' : ''}"
+                        style="background-color:${tabChild.bgcolor @context = 'styleString'}">
+                        <sly data-sly-test.latestArticles="${tabChild.latestonly ? true : false}" />
+                        <sly
+                            data-sly-use.model="${'com.hdfclife.path2prospermicrosite.core.models.HDFCPillarModel' @ fetchLatestOnly=latestArticles, parentPath=tabChild.articlepath}">
+                            <div class="tc-tab-pad">
+                                <div class="tc-tab-details-container">
+                                    <div class="tc-tab-details-section1">
+                                        <h2 class="tc-tab-heading">${tabChild.sectionheading}</h2>
+                                        <p class="tc-tab-heading-para">${tabChild.sectionsubheading}</p>
+                                    </div>
+                                    <div class="tc-tab-details-section2"
+                                        style="background-color:${tabChild.sectionparabgcolor @context = 'styleString'}"
+                                        data-sly-test="${tabChild.sidebanner}">
+                                        ${tabChild.sidebanner @context='html'}
+                                        <div class="tc-tab-details-section2-button">
+                                            <p>
+                                                <a style="color:${tabChild.sectionparabgcolor @context = 'styleString'}" href="${tabChild.articlepath}.html" target="_self">
+                                                    See All  
+                                                    <svg style="margin-left: 8px;" xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12" fill="none">
+                                                        <path d="M0 3.41438L2.58562 6L0 8.58562V12L6 6L0 0V3.41438Z" fill="${tabChild.sectionparabgcolor @context = 'styleString'}"/>
+                                                    </svg>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-container tab-swiper-container tc-slider swiper1"
+                                    style="height:${properties.containerheight @context = 'styleString'}">
+                                    <div class="swiper-wrapper">
+                                        <sly data-sly-list.pages="${model.childPages}">
+                                            <div class="swiper-slide">
+                                                <div class="tc-swiper-slide-container">
+                                                    <picture>
+                                                        <source media="(max-width:426px)"
+                                                            srcset="${pages.mobileBackgroundImagePath}" />
+                                                        <img class="tc-slider-img" src="${pages.backgroundImagePath}"
+                                                            alt="img">
+                                                    </picture>
+                                                    <div class="tc-position">
+                                                        <div class="tc-position-text">
+                                                            <img class="tc-position-text-img"
+                                                                src="${pages.bannerIcon ? pages.bannerIcon : ''}"
+                                                                alt="img">
+                                                            <p class="tc-position-text-content">
+                                                                <span class="text-capitalize">${pages.articletype}
+                                                                </span><i>• ${pages.readtime}</i>
+                                                            </p>
+                                                            <p class="tc-position-text-contentbold font-size-16">
+                                                                ${pages.articleheading}</p>
+                                                            <p class="font-size-16">${pages.articledesc}</p>
+                                                        </div>
+                                                        <div class="tc-position-readmore">
+                                                            <p>
+                                                                <a class="p2p-button" href="${pages.redirectPath}.html"
+                                                                    target="_self">
+                                                                    Read more <img class="tc-position-readmore-img"
+                                                                        src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/carousel-btn-white.svg">
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </sly>
+                                    </div>
+                                    <!-- Add Pagination -->
+
+                                    <!-- Add Navigation -->
+                                    <div class="tab-button-next"><img
+                                            src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/carousel-tab-right-arrow.svg"
+                                            alt="img"></div>
+                                    <div class="tab-button-prev"><img
+                                            src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/carousel-tab-left-arrow.svg"
+                                            alt="img"></div>
+                                </div>
+
+                                <div class="tc-parent-swiperpagination">
+                                    <div class="tc-tab-swiper-pagination${tabChildList.count}"></div>
+                                </div>
+                            </div>
+                        </sly>
+                    </div>
+                </sly>
+            </sly>
+        </sly>
+    </div>
+</div>

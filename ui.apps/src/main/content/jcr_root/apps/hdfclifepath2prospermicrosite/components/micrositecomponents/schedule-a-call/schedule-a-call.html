@@ -1,0 +1,187 @@
+<script>
+   apiAvailableslots = "${properties.apiAvailableslots @context='scriptString'}"
+   apiCallSchedule = "${properties.apiCallSchedule @context='scriptString'}"
+   Sitekey = "${properties.captchaSiteKey @context='scriptString'}";
+</script>
+<sly data-sly-use.mobileViewHelper="${'com.hdfclife.path2prospermicrosite.core.models.UTMSourceHelper'}">
+   <sly data-sly-test="${!mobileViewHelper.getHideHeader || properties.schedulecallchkek}">
+      <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadRecapatcha&render=explicit" async defer> </script> -->
+      <sly data-sly-use.TestModel="${'com.hdfclife.path2prospermicrosite.core.models.SchedulCallModel'}" />
+      <sly data-sly-list.child="${TestModel.getProductListingDetails}">
+         <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadRecapatcha&render=explicit" async defer> </script> -->
+         <div class="modal fade sac" id="${properties.popUpId}" role="dialog" aria-label="submitForm"
+            data-keyboard="false" data-backdrop="static">
+            <input type="hidden" value="" class="captchaID">
+            <div class="modal-dialog modal-lg max1000">
+               <!-- Modal content-->
+               <div class="modal-content ">
+                  <span class="close-icon1" data-bs-dismiss="modal"></span>
+                  <div class="modal-body info-form">
+                     <div class="geta-callback-component-popup">
+                        <div class="geta-callback-inner">
+                           <h2>${properties.heading ? properties.heading : child.title}</h2>
+                           <div class="timetext">
+                              <sly data-sly-test="${properties.timetext}">
+                                 ${properties.timetext @ context='html'}
+                              </sly>
+                              <sly data-sly-test="${!properties.timetext}">
+                                 ${child.subtext @ context='html'}
+                              </sly>
+                           </div>
+                           <div class="subtext">
+                              ${properties.text @ context='html'}
+                           </div>
+                           <form autocomplete="off" class="schedule-a-call-back"
+                              data-page-name="${pageProperties.pageName}">
+                              <div class="row">
+                                 <div class="col-lg-4 col-sm-12">
+                                    <div class="inputGroup form-group"><label>${properties.enterName ?
+                                          properties.enterName : child.textForName}</label><input type="text"
+                                          class="first-name" placeholder="Name" name="first_name"
+                                          data-validation="fullname">
+                                       <input type="hidden" name="categoriesCompo"
+                                          value="${pageProperties.categoryname}">
+                                       <input type="hidden" name="pageslugCompo" value="${pageProperties.pageslug}">
+                                       <span class="error-txt"></span>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-4 col-sm-12">
+                                    <div class="inputGroup form-group"><label>${properties.enterNumber ?
+                                          properties.enterNumber : child.textForContact}</label>
+                                       <input type="text" placeholder="+91" disabled="" class="isd">
+                                       <input type="text" placeholder="Mobile Number" class="modilewidth" name="phone"
+                                          onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                                          data-validation="mobileNo" maxlength="10">
+                                       <input type="hidden" name="source" value="call-me-now" />
+                                       <span class="error-txt"></span>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-4 col-sm-12">
+                                    <div class="inputGroup form-group">
+                                       <label>${properties.enterPlan ? properties.enterPlan :
+                                          child.textForInsurance}</label>
+                                       <div class="select-holder ">
+                                          <select id="insurance_category" aria-label="Insurance Category">
+                                             <option value="" disabled selected>Select Plan Type</option>
+                                             <!-- <option value="health_plan">Health Plans</option> -->
+                                              <sly data-sly-list.dropdown="${resource.children}">
+                                                <sly data-sly-test.dropdownCond="${dropdown.name == 'planDropdownList'}">
+                                                   <sly data-sly-list.dropdownChild="${dropdown.children}">
+                                                      <option value="${dropdownChild.plandropdownvalue}">${dropdownChild.planDropdownText}</option>
+                                                   </sly>
+                                                </sly>
+                                              </sly>
+                                              <sly data-sly-test="${!dropdownCond}">
+                                                <option value="investment_plan">Investment Plans</option>
+                                                <option value="protection_plan">Protection Plans</option>
+                                                <option value="children_plan">Children's Plans</option>
+                                                <option value="savings_plan">Savings Plans</option>
+                                                <option value="retirement_plan">Retirement Plans</option>
+                                              </sly>
+                                          </select>
+                                       </div>
+                                       <span class="scb-plan-error error-txt"></span>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-4 col-sm-12 allDates d-none">
+                                    <div class="inputGroup form-group"><label>${properties.availableDateHead ?
+                                          properties.availableDateHead : child.textForDate}
+                                          <!-- ${properties.availableDateHead} -->
+                                       </label>
+                                       <input type="text" class="form-control date hasDatepicker"
+                                          id="callScheduleDateValue" name="scheduleDate" placeholder="DD/MM/YYYY"
+                                          readonly="" maxlength="10">
+                                       <span class="error-txt d-none"></span>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-4 col-sm-12 slotsData  d-none">
+                                    <div class="inputGroup form-group"><label>${properties.availableTimeHead ?
+                                          properties.availableTimeHead : child.textForTime}
+                                          <!-- ${properties.availableTimeHead} -->
+                                       </label>
+                                       <!-- <p>${headerAuthoring.currentStyle.logoRedirectUrl}</p> -->
+                                       <div class="select-holder ">
+                                          <select class="availableTime" id="availableTime" aria-label="Available Time">
+                                             <option selected disabled>Select Available Slots</option>
+                                          </select>
+                                       </div>
+                                       <span class="error-txt"></span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-sm-12 disc-text">
+                                    <div class="d-flex">
+                                       <input type="checkbox" class="scb-checkbox" name="ndnc_flag" style="float:left;"
+                                          checked>
+                                       <span class="chkbx">
+                                          <sly data-sly-test="${properties.modalText}">
+                                             ${properties.modalText @context = 'html'}
+                                          </sly>
+                                          <sly data-sly-test="${!properties.modalText}">
+                                             ${child.consentText @context = 'html'}
+                                          </sly>
+                                       </span>
+                                    </div>
+                                    <span class="scb-checkbox-error error-txt"
+                                       style="line-height:15px; padding:0 0 10px 20px;"></span>
+                                 </div>
+                              </div>
+                              <div class="text-center contcaptcha">
+                                 <div class="g-recaptcha" id="${properties.capatchaId}" data-captcha="true"
+                                    data-callback="submitForm"></div>
+                              </div>
+                              <span class="msg-error error error-txt"></span>
+                              <div class="row" data-sly-test="${properties.ctaText}">
+                                 <div class="col-sm-12 buttons text-center">
+                                    <!-- <button type="button" class="btn btn-primary btnred scheduleCallTodayBtn"
+                                 id="scheduleCallTodayBtn">${properties.instantCall ? properties.instantCall : child.instantCall}</button> -->
+                                    <button type="button" class="btn btn-primary btnred scheduleCallBtn d-none"
+                                       id="scheduleCallBtn">${properties.ctaText ? properties.ctaText :
+                                       child.textForCta}</button>
+                                    <button type="button" class="btn btn-primary btnred scheduleChange"
+                                       id="scheduleChange">${properties.nextctaText ? properties.nextctaText :
+                                       child.nextctaText}</button>
+                                 </div>
+                              </div>
+                              <div class="row successMsg d-none">
+                                 <div class="col-lg-3 thumb">
+                                    <div class="thumbIcon">
+                                       <img loading="lazy"
+                                          src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/like.png"
+                                          alt="Thumb">
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-10 scheduleCallMsg">
+                                 </div>
+                              </div>
+                              <small>
+                                 ${child.textForDisclaimer @context = 'html'}
+                              </small>
+                           </form>
+
+                        </div>
+                     </div>
+                     <div class="message-success" style="display: none;">
+                        <p class="text-center">Thanks for contacting us.<br>
+                           We will get in touch soon.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="d-none scheduleMsg">
+               ${child.schedulingCall @context = 'html'}
+            </div>
+            <div class="d-none rescheduleMsg">
+               ${child.reschedulingCall @context = 'html'}
+            </div>
+            <div class="d-none alreadyScheduleMsg">
+               ${child.differentSession @context = 'html'}
+            </div>
+            <div class="d-none maxAttemptMsg">
+               ${child.exhaustedErrorMessage @context = 'html'}
+            </div>
+         </div>
+      </sly>
+   </sly>
+</sly>

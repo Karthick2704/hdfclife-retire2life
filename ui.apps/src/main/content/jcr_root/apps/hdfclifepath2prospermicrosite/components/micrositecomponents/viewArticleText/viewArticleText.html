@@ -1,0 +1,13 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<div>
+  <div class="p2p-font-18 viewArticle">
+    <a href="${properties.link}.html" style="color: #ed1c24">
+      ${properties.text}
+    </a>
+  </div>
+</div>
+
+<sly
+  data-sly-call="${templates.placeholder @ isEmpty = !properties.text}"
+></sly>

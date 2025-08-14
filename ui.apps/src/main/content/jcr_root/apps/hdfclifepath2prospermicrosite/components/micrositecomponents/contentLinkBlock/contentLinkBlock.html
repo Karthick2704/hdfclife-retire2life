@@ -1,0 +1,22 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<section id="${properties.sectionName}">
+	<div class="clb-list-container" data-sly-test="${properties.articleListHeading}">
+        <div class="clb-container-heading">
+            <h1 class="p2p-font-32">${properties.articleListHeading}</h1>
+        </div>
+        <div class="clb-content-container">
+            <div class="p2p-font-18 clb-contents">
+                ${properties.description @context='html'}
+            </div>
+            <div class="clb-image-section">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="${properties.mobileArticleListImageFileReference}">            
+                    <img src="${properties.articleListImageFileReference}" alt="${properties.articleListImageAltText}" class="articleListImageFileReference">
+                </picture>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.articleListHeading}"></sly>

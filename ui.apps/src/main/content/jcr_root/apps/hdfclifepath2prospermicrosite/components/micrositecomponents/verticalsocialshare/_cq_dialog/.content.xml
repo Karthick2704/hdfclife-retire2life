@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Vertical Social Share Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <copyHighlightIcon
+                        granite:class="cmp-image__editor-file-upload"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        class="cq-droptarget"
+                        fieldLabel="Copy Highlight Icon"
+                        fileNameParameter="./fileName"
+                        fileReferenceParameter="./copyHighlightIcon"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        name="./icon"/>
+                    <copyIconAltText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Configure the Copy Highlight Icon Alt Text"
+                        fieldLabel="Copy Highlight Icon Alt Text"
+                        name="./copyIconAltText"
+                        required="{Boolean}true"/>
+                    <copiedHighlightIcon
+                        granite:class="cmp-image__editor-file-upload"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        class="cq-droptarget"
+                        fieldLabel="Copied Highlight Icon"
+                        fileNameParameter="./fileName"
+                        fileReferenceParameter="./copiedHighlightIcon"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        name="./icon"/>
+                    <copiedIconAltText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Configure the Copied Highlight Icon Alt Text"
+                        fieldLabel="Copied Highlight Icon Alt Text"
+                        name="./copiedIconAltText"
+                        required="{Boolean}true"/>
+                    <shareicon
+                        granite:class="cmp-image__editor-file-upload"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        class="cq-droptarget"
+                        fieldLabel="Share Icon"
+                        fileNameParameter="./share"
+                        fileReferenceParameter="./shareicon"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        name="./icon0"/>
+                    <sharealttext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Configure the Share Alttext"
+                        fieldLabel="Share Alttext"
+                        name="./sharealttext"
+                        required="{Boolean}true"/>
+                    <twittericon
+                        granite:class="cmp-image__editor-file-upload"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        class="cq-droptarget"
+                        fieldLabel="Twitter Icon"
+                        fileNameParameter="./twitter"
+                        fileReferenceParameter="./twittericon"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        name="./icon01"/>
+                    <twitteralttext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Configure the Twitter Alttext"
+                        fieldLabel="Twitter Alttext"
+                        name="./twitteralttext"
+                        required="{Boolean}true"/>
+                    <facebookicon
+                        granite:class="cmp-image__editor-file-upload"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        class="cq-droptarget"
+                        fieldLabel="Facebook Icon"
+                        fileNameParameter="./facebook"
+                        fileReferenceParameter="./facebookicon"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        name="./icon02"/>
+                    <facebookalttext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Configure the Facebook Alttext"
+                        fieldLabel="Facebook Alttext"
+                        name="./facebookalttext"
+                        required="{Boolean}true"/>
+                    <linkedinicon
+                        granite:class="cmp-image__editor-file-upload"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        class="cq-droptarget"
+                        fieldLabel="Linkedin Icon"
+                        fileNameParameter="./linkedin"
+                        fileReferenceParameter="./linkedinicon"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        name="./icon03"/>
+                    <linkedinalttext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Configure the Linkedin Alttext"
+                        fieldLabel="Linkedin Alttext"
+                        name="./linkedinalttext"
+                        required="{Boolean}true"/>
+                    <whatsappicon
+                        granite:class="cmp-image__editor-file-upload"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        class="cq-droptarget"
+                        fieldLabel="Whatsapp Icon"
+                        fileNameParameter="./whatsapp"
+                        fileReferenceParameter="./whatsappicon"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        name="./icon04"/>
+                    <whatsappalttext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Configure the Whatsapp Alttext"
+                        fieldLabel="Whatsapp Alttext"
+                        name="./whatsappalttext"
+                        required="{Boolean}true"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

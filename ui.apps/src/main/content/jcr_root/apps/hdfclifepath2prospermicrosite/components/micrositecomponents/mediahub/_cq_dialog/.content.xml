@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Mediahub Filters Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <mainDetails
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Main Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <articlePath
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldDescription="Configure the Icon path"
+                                                fieldLabel="Parent path of Articles"
+                                                name="./parentArticlePath"
+                                                rootPath="/content"/>
+                                            <headerTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Configure the Main Heading"
+                                                fieldLabel="Main Heading"
+                                                name="./headerTitle"/>
+                                            <iconPath
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldDescription="Configure the Icon path"
+                                                fieldLabel="Icon Path"
+                                                name="./iconPath"
+                                                rootPath="/content/dam"/>
+                                            <altText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Configure the Alt Text"
+                                                fieldLabel="Alt Text"
+                                                name="./altText"/>
+                                            <mobileBackground
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldDescription="Configure the Icon path"
+                                                fieldLabel="mobileBackground"
+                                                name="./mobileBackground"
+                                                rootPath="/content/dam"/>
+                                            <mobileAltText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Configure the Alt Text"
+                                                fieldLabel="mobileAltText"
+                                                name="./mobileAltText"/>
+                                            <mediaTwitter
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldLabel="Media Twitter Icon"
+                                                name="./mediaTwitter"
+                                                rootPath="/content/dam"/>
+                                            <altTwitter
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="(leave empty to use the title defined above)"
+                                                fieldLabel="Alt Twitter"
+                                                name="./altTwitter"/>
+                                            <mediaFacebook
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldLabel="Media Facebook Icon"
+                                                name="./mediaFacebook"
+                                                rootPath="/content/dam"/>
+                                            <altFacebook
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="(leave empty to use the title defined above)"
+                                                fieldLabel="Alt Facebook"
+                                                name="./altFacebook"/>
+                                            <mediaLinkedin
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldLabel="Media Linkedin Icon"
+                                                name="./mediaLinkedin"
+                                                rootPath="/content/dam"/>
+                                            <altLinkedin
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="(leave empty to use the title defined above)"
+                                                fieldLabel="Alt Linkedin"
+                                                name="./altLinkedin"/>
+                                            <mediaWhatsapp
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Media whatsapp Icon"
+                                                name="./mediaWhatsapp"
+                                                rootPath="/content/dam"/>
+                                            <altWhatsapp
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="(leave empty to use the title defined above)"
+                                                fieldLabel="Alt Whatsapp"
+                                                name="./altWhatsapp"/>
+                                            <shareIcon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Media Share Icon"
+                                                name="./shareIcon"
+                                                rootPath="/content/dam"/>
+                                            <altShare
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Alt Share"
+                                                name="./altShare"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </mainDetails>
+                    <sectionOneDetails
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Section One Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <sectionOneBrandDetails
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldLabel="Section One Brand Details"
+                                                name="./sectionOneBrandDetails"
+                                                renderReadOnly="{Boolean}true">
+                                                <field
+                                                    granite:class="cmp-form-options__editor-item-multifield-composite-item coral-Well"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./sectionOneBrandDetails">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <type
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                            fieldLabel="Type of Content"
+                                                            name="./type"
+                                                            required="{Boolean}true">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <article
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Article"
+                                                                    value="article"/>
+                                                                <podcast
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Podcast"
+                                                                    value="podcast"/>
+                                                                <infographics
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Infographics"
+                                                                    value="infographic"/>
+                                                                <videos
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Videos"
+                                                                    value="video"/>
+                                                            </items>
+                                                        </type>
+                                                        <articleName
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Article Text"
+                                                            name="./articleName"/>
+                                                        <imagePath
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                            fieldDescription="Configure the Image Path"
+                                                            fieldLabel="Media Time Icon"
+                                                            name="./imagePath"
+                                                            rootPath="/content/dam"/>
+                                                        <altimagetext
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Alt Image text"
+                                                            name="./altImageText"/>
+                                                    </items>
+                                                </field>
+                                            </sectionOneBrandDetails>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </sectionOneDetails>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

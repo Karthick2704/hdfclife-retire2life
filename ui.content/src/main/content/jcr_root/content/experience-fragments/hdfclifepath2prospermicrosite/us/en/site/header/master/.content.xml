@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-12-24T12:02:59.189+05:30"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2024-12-17T10:24:38.045Z"
+        cq:lastReplicatedBy="hdfc-admin"
+        cq:lastReplicationAction="Activate"
+        cq:tags="[]"
+        cq:template="/conf/hdfclifepath2prospermicrosite/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Header"
+        jcr:uuid="9db10553-b891-4dae-aa2d-8bd947e42614"
+        sling:resourceType="hdfclifepath2prospermicrosite/components/structure/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hdfclifepath2prospermicrosite/components/container"
+            layout="simple">
+            <logo/>
+            <header_copy_copy
+                jcr:created="{Date}2024-11-07T17:30:27.729+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-12-20T06:35:01.246Z"
+                jcr:lastModifiedBy="hdfc-admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hdfclifepath2prospermicrosite/components/micrositecomponents/header"
+                cancelIcon="/content/dam/hdfclifepath2prospermicrosite/home/retirement/cancel-icon.svg"
+                cancelIconAltText="Cancel Icon"
+                description="From parenting to retirement, and everything in between - we help you plan your life decisions!"
+                inputSearchIcon="/content/dam/hdfclifepath2prospermicrosite/home/retirement/input-search-icon.svg"
+                menuDisclaimer="© HDFC PATH2PROSPER 2024-2025"
+                menuIcon="/content/dam/hdfclifepath2prospermicrosite/home/retirement/hamburger-icon.svg"
+                menuIconAltText="Menu Icon"
+                messageIcon="/content/dam/hdfclifepath2prospermicrosite/home/retirement/mail-icon.svg"
+                messageIconAltText="Message Icon"
+                messageIconLink="#"
+                path="/content/hdfclifepath2prospermicrosite/us/en/Home"
+                primaryLogoImage="/content/dam/hdfclifepath2prospermicrosite/home/retirement/HDFC-life-logo-new.svg"
+                primaryLogoImageAltText="primary-logo"
+                primaryLogoImageLink="#"
+                searchDescription="Search using keywords or topic"
+                searchIcon="/content/dam/hdfclifepath2prospermicrosite/home/retirement/serach-icon.svg"
+                searchIconAltText="[Search Icon,Search Icon]"
+                secondaryLogoImage="/content/dam/hdfclifepath2prospermicrosite/home/retirement/path2-prosper-logo.svg"
+                secondaryLogoImageAltText="secondaryLogo"
+                secondaryLogoImageLink="#"
+                textIsRich="true">
+                <sectionOneBrandDetails jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        targetPath="/content/hdfclifepath2prospermicrosite/us/en/Home/parenting"
+                        title="Parenting"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        targetPath="/content/hdfclifepath2prospermicrosite/us/en/Home/retirement"
+                        title="Retirement"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        targetPath="/content/hdfclifepath2prospermicrosite/us/en/Home/tax-planning"
+                        title="Tax-Planning"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        targetPath="/content/hdfclifepath2prospermicrosite/us/en/Home/investments"
+                        title="Investments"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        targetPath="/content/hdfclifepath2prospermicrosite/us/en/Home/family-security"
+                        title="Family Security"/>
+                    <item5
+                        jcr:primaryType="nt:unstructured"
+                        targetPath="/content/hdfclifepath2prospermicrosite/us/en/Home/wellness"
+                        title="Wellness"/>
+                </sectionOneBrandDetails>
+            </header_copy_copy>
+            <space
+                jcr:created="{Date}2024-12-24T12:02:59.187+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-12-24T12:02:59.187+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hdfclifepath2prospermicrosite/components/micrositecomponents/space"/>
+        </root>
+    </jcr:content>
+</jcr:root>

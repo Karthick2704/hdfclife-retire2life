@@ -1,0 +1,61 @@
+
+
+    .disclaimer-container {
+      width: 90%;         
+      background-color: #fff;
+      padding: 45px 50px 0px;     
+    }
+
+    .disclaimer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .disclaimer-header  {
+
+      margin: 0;
+    }
+
+    .disclaimer-header .icon {
+      transform: rotate(0deg);
+      transition: transform 0.3s ease;
+    }
+
+    .disclaimer-header .icon.rotate {
+      transform: rotate(180deg);
+    }
+
+    .disclaimer-content {
+      margin: 12px;
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .disclaimer-content.disclaimer-active {
+      display: block;
+    }
+
+    .disclaimer-content p{
+
+      line-height: 1.6;
+      margin: 8px 0;
+    }
+
+	@media (max-width: 768px){
+
+	  .disclaimer-container {
+    		width:100%;
+    		background-color: #fff;
+    		padding: 35px 20px 0px;
+	   }
+      .disclaimer-content{
+
+            line-height:14px;
+       }
+       .disclaimer-header img{
+            width:17px;
+       }
+
+	}

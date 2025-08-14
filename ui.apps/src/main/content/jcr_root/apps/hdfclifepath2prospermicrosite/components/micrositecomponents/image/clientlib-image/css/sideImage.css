@@ -1,0 +1,15 @@
+
+	.image-div{
+		position:absolute;
+    	z-index:20;
+    }
+
+     .image-ver-image{
+        display:block;
+    }
+
+    @media (max-width: 768px) {
+		.image-ver-image{
+            display:none;
+        }
+    }

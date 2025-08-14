@@ -1,0 +1,244 @@
+.mainBannerComponent .banner-con {
+    position: relative;
+    width: 100%;
+}
+.mainBannerComponent .main-banner-image {
+    height: 70vh;
+    object-fit: cover;
+}
+.mainBannerComponent .bannerimage img {
+    width: 100%;
+}
+.mainBannerComponent .main-banner-text {
+    position: absolute;
+    bottom: 0px;
+    background-color: #f2f0f0;
+    border-top-right-radius: 30px;
+    padding: 15px 15px 25px 50px;
+    width: 43%;
+}
+.mainBannerComponent .main-banner-display {
+    display: block !important;
+}
+.mainBannerComponent .banner-display {
+    display: none !important;
+}
+.mainBannerComponent .banner-time-text {
+    position: absolute;
+    bottom: 90%;
+    left: 0%;
+    background-color: #f4f5f0;
+    border-top-right-radius: 17px;
+    padding: 15px 15px 15px 50px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.mainBannerComponent .banner-title {
+    position: absolute;
+    bottom: 0px;
+   /* Keep it near the bottom */
+    background-color: #f2f0f0;
+    border-top-right-radius: 30px;
+    padding: 15px 50px 25px 50px;
+    font-size: 32px;
+    color: #ed1c24;
+    line-height: 1.3;
+}
+.mainBannerComponent .mobile-view-image {
+    display: none;
+}
+.mainBannerComponent .banner-mobile-view-title {
+    display: none;
+    color: #ed1c24;
+}
+.mainBannerComponent .banner-mobile-time-text {
+    display: none;
+}
+.mainBannerComponent .banner-icon-text {
+    font-size: 14px;
+}
+.mainBannerComponent .banner-title-h1 {
+    font-size: 46px;
+    font-weight: 600;
+    font-family: 'poppins-semibold';
+}
+.mainBannerComponent .banner-title-h2 {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: 'poppins-semibold';
+}
+.mainBannerComponent .banner-article-icon {
+    width: 15px;
+    height: 15px;
+}
+.mainBannerComponent .banner-line {
+    border: 8px solid #f2f0f0;
+    width: 100%;
+    display: block;
+}
+/* @media (max-width: 1440px) {
+    .mainBannerComponent .main-banner-text {
+        width: 43%;
+   }
+} */
+/* @media (max-width: 1280px) {
+    .mainBannerComponent .main-banner-text {
+        width: 49% !important;
+   }
+}
+@media (max-width: 1024px) {
+    .mainBannerComponent .main-banner-text {
+        width: 50% !important;
+   }
+}
+@media (max-width: 992px) {
+    .mainBannerComponent .main-banner-text {
+        width: 65% !important;
+   }
+} */
+@media (max-width: 768px) {
+    .mainBannerComponent .main-banner-image {
+        height: 280px;
+        object-fit: cover;
+   }
+    .mainBannerComponent .main-banner-text {
+        width: 100% !important;
+        background-color: #f2f0f0;
+        position: relative;
+        margin-top: -20px;
+        bottom: 0;
+        padding: 10px 20px 10px 20px;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        box-shadow:  0px -4px 15px -9px #000000;
+   }
+    .mainBannerComponent .desktop-view-image {
+        display: none;
+   }
+    .mainBannerComponent .mobile-view-image {
+        display: block;
+   }
+    .mainBannerComponent .banner-article-icon {
+        width: 18px;
+        height: 18px;
+   }
+    .mainBannerComponent .banner-con {
+        position: relative;
+        width: 100%;
+   }
+    .mainBannerComponent .bannerimage img {
+        width: 100%;
+        height: auto;
+   }
+    .mainBannerComponent .banner-time-text {
+        position: absolute;
+        bottom: 78%;
+       /* Adjust this value based on design */
+        background-color: #f2f0f0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 10px;
+        font-size: 12px;
+        transform: translateY(-50%);
+        display: none;
+   }
+    .mainBannerComponent .banner-title {
+        position: absolute;
+        bottom: -65px;
+       /* Keep it near the bottom */
+        background-color: #f2f0f0;
+        border-top-right-radius: 10px;
+        padding: 15px 10px 20px 30px;
+        font-size: 20px;
+        max-width: 100%;
+       /* Adjust width as needed */
+        color: #f00;
+        display: none;
+   }
+    .mainBannerComponent .banner-mobile-view-title {
+        width: 100%;
+        background-color: #f2f0f0;
+        display: block;
+        position: absolute;
+        bottom: -65px;
+        padding: 15px 10px 20px 20px;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+   }
+    .mainBannerComponent .banner-mobile-time-text {
+        width: 100%;
+        background-color: #f2f0f0;
+        display: flex;
+        column-gap: 4px;
+        font-size: 12px;
+   }
+    .mainBannerComponent .banner-icon-text {
+        font-size: 12px;
+   }
+    .mainBannerComponent .banner-title-h1 {
+        font-size: 20px;
+        padding-top: 8px;
+   }
+    .mainBannerComponent .banner-title-h2 {
+        font-size: 14px;
+   }
+    .mainBannerComponent .banner-article-icon {
+        width: 18px;
+        height: 18px;
+   }
+    .mainBannerComponent .banner-line {
+        border: 5px solid #f2f0f0;
+        width: 100%;
+        display: none;
+   }
+   .mainBannerComponent .margin-btm{
+    margin-bottom: 65px;
+   }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+    .mainBannerComponent .banner-mobile-time-text {
+        display: flex;
+        column-gap: 10px;
+   }
+    .mainBannerComponent .banner-title {
+        position: absolute;
+        bottom: 0px;
+       /* Keep it near the bottom */
+        background-color: #f2f0f0;
+        border-top-right-radius: 10px;
+        padding: 10px;
+        padding-left: 50px;
+   }
+    .mainBannerComponent .banner-icon-text {
+        font-size: 14px;
+   }
+    .mainBannerComponent .banner-title-h1 {
+        font-size: 22px;
+   }
+    .mainBannerComponent .banner-title-h2 {
+        font-size: 20px;
+   }
+}
+@media (max-width: 425px) {
+    /* .mainBannerComponent .main-banner-image {
+        height: 488px !important;
+        object-fit: cover;
+   } */
+    .mainBannerComponent .banner-mobile-view-title {
+        width: 100%;
+        background-color: #f2f0f0;
+        display: block;
+        position: absolute;
+        bottom: -65px;
+        padding: 10px 20px 10px 20px;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+   }
+    .mainBannerComponent .bannerimage img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+   }
+}

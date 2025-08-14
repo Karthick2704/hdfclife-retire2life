@@ -1,0 +1,33 @@
+/* latin-ext */
+@font-face {
+    /* 700 */
+    font-family: 'poppins-bold'; 
+    font-style: normal;
+    /* font-display: swap; */
+    src: url("../resources/fonts/Poppins/Poppins-Bold.ttf") format('truetype');
+  }
+  /* latin-ext */
+  @font-face {
+    /* 600, 500 */
+    font-family: 'poppins-semibold';
+    font-style: normal;
+    /* font-display: swap; */
+    src: url("../resources/fonts/Poppins/Poppins-SemiBold.ttf") format('truetype');
+  }
+  /* latin */
+  @font-face {
+    /* 400 */
+    font-family: 'poppins-medium';
+    font-style: normal;
+    /* font-display: swap; */
+    src: url("../resources/fonts/Poppins/Poppins-Medium.ttf") format('truetype');
+  }
+  /* latin-ext */
+  @font-face {
+    /* 300 */
+    font-family: 'poppins-regular';
+    font-style: normal;
+    /* font-display: swap; */
+    src: url("../resources/fonts/Poppins/Poppins-Regular.ttf") format('truetype');
+  }
+ 

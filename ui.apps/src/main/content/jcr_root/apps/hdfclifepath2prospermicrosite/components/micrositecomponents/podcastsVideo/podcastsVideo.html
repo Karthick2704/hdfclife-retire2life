@@ -1,0 +1,68 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+
+<sly data-sly-use.model="com.hdfclife.path2prospermicrosite.core.models.PodcastsAudioModel" />
+
+<section id="${properties.sectionName}">
+    <div class="podcast-container">
+        <div class="podcast-header">
+            <!-- Dynamic Thumbnail Image for the Current Video -->
+            <img style="display: none;" id="podcastThumbnail" src="${properties.podcastImage}"
+                alt="${properties.altTextPodcastImage}">
+            <div class="podcast-video-player">
+                <div id="podcastVideoContainer">
+                </div>
+            </div>
+        </div>
+
+        <div class="podcast-episodes">
+            <sly data-sly-list.sectionOne="${model.sectionOneBrandDetails}">
+                <div class="podcast-episode">
+                    <h3 class="p2p-font-32">${sectionOne.title}</h3>
+                    ${sectionOne.podcastDescription @context='html'}
+                    <div class="episode-details">
+                        <button class="podcast-play-button" data-video-src="${sectionOne.audio}"
+                            data-image-src="${sectionOne.episodeImage}" onclick="playVideo(this)">▶ Play
+                        </button>
+                        <span class="podcast-duration">${sectionOne.timeDuration}</span>
+                    </div>
+                </div>
+                <hr class="podcast-hr">
+            </sly>
+        </div>
+        <div class="podcast-episodesmobile">
+            <div class="swiper-container podcastVideo-mobile">
+                <div class="swiper-wrapper">
+
+                    <sly data-sly-list.sectionOne="${model.sectionOneBrandDetails}">
+                        <div class="swiper-slide">
+                            <div class="podcast-episode">
+                                <h3 class="p2p-font-32">${sectionOne.title}</h3>
+                                ${sectionOne.podcastDescription @context='html'}
+                                <div class="episode-details">
+                                    <button class="podcast-play-button" data-video-src="${sectionOne.audio}"
+                                        data-image-src="${sectionOne.episodeImage}" onclick="playVideo(this)">▶ PLAY
+                                    </button>
+                                    <span class="podcast-duration">${sectionOne.timeDuration}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </sly>
+
+                </div>
+                <!-- <div class="podcast-swiper-button-prev">
+                    <img src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/carousel-tab-right-arrow.svg"
+                        alt="img">
+                </div>
+                <div class="podcast-swiper-button-next">
+                    <img src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/carousel-tab-left-arrow.svg"
+                        alt="img">
+                </div> -->
+                <div class="podcastvideo-swiperpagination">
+                    <!-- <div class="tc-tab-swiper-pagination${tabChildList.count}"></div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.timeDuration}"></sly>

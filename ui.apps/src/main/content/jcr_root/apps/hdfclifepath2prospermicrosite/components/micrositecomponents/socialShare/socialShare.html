@@ -1,0 +1,30 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-use.model="com.hdfclife.path2prospermicrosite.core.models.SocialShareItem" />
+
+<section id="${properties.sectionName}">
+
+    <div class="ss-container" data-sly-test="${properties.clockImageAltText}">
+        <div class="ss-date-section">
+            <div class="ss-icon">
+                <a href="#podcastVideo"><img src="${properties.clockImage}" alt="${properties.clockImageAltText}" class="clock-image" /></a>
+            </div>
+            <div class="ss-date-text">${properties.dateText @context='html'}</div>
+        </div>
+        <div class="ss-share-text"> ${properties.articleText}</div>
+        <div class="ss-icon-group">
+            <div class="ss-copy-icon"><img src="${properties.copyHighlightIcon}" alt="${properties.copyIconAltText}"
+                    width="100%" /></div>
+            <div class="ss-copied-icon"><img src="${properties.copiedHighlightIcon}"
+                    alt="${properties.copiedIconAltText}" width="100%" /></div>
+            <sly data-sly-list.item="${model.sectionOneBrandDetails}">
+                <a class="ss-share-icon ${item.socialShareName}" target="_blank">
+                    <img src="${item.socialShareImage}" alt="${item.socialShareAltText}" class="social-share-img" />
+                </a>
+            </sly>
+        </div>
+    </div>
+
+</section>
+
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.dateText}"></sly>

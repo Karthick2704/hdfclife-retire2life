@@ -1,0 +1,62 @@
+.tagcomp {
+	/* Mobile View */
+}
+ .tagcomp .t-tags-heading {
+
+	 color: #1a3e6d;
+	 margin-bottom: 10px;
+	 font-family: 'poppins-semibold';
+}
+ .tagcomp .t-tags {
+	 display: flex;
+	 flex-wrap: wrap;
+	 gap: 10px;
+}
+ .tagcomp .t-tag-marginLeft {
+	 margin-left: 50px;
+}
+
+.tagcomp .t-tag-marginTop{
+	margin-top : 45px;
+}
+ .tagcomp .t-tag {
+	 height: 30px;
+	 padding: 0 12px;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 white-space: nowrap;
+	 text-decoration: none;
+	 transition: background-color 0.3s, color 0.3s;
+	 border-radius: 20px;
+	 border: 1px solid #e5e5e5;
+	 background-color: #005e9e;
+	 color: white;
+	 font-family: 'poppins-semibold';
+}
+ .tagcomp .t-tag:hover {
+	 background-color: #fff;
+	 color: #1a3e6d;
+}
+ .tagcomp .cmp-link__screen-reader-only {
+	 display: none;
+}
+ @media (max-width: 768px) {
+
+	 .tagcomp .t-tags {
+		 display: flex;
+		 flex-wrap: wrap;
+		 gap: 8px;
+	}
+	 .tagcomp .t-tag {
+		 height: 25px;
+		 padding: 4px 8px;
+	}
+	 .tagcomp .t-tag-marginLeft {
+		 margin-left: 20px;
+	}
+	.tagcomp .t-tag-marginTop{
+		margin-top : 35px;
+	}
+}
+ 

@@ -1,0 +1,23 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<section id="${properties.sectionName}">
+    <div class="${properties.isDecorative ? 'icontext-sub-container' : 'icontext-container'} ${properties.isMargin ? 'icontext-margin' : ''}" >
+       <div class="icontext-height">
+          <picture>
+             <source media="(max-width:426px)" srcset="${properties.mobileImage}" />
+             <img class="${properties.isDecorative ? 'icontext-sub-img' : 'icontext-img'}" src="${properties.iconImage}" alt="${properties.iconimageAltText}" />
+          </picture>
+       </div>
+       <div class="p2p-font-18 ${properties.isDecorative ? 'icontext-sub-heading' : 'icontext-heading'}">
+            ${properties.icontextheading @context="html"}
+       </div>
+       <div class="p2p-font-18 ${properties.isDecorative ? 'icontext-sub-description' : 'icontext-description'}">
+          ${properties.description @context="html"}
+          <div data-sly-resource="${@path='par', resourceType='wcm/foundation/components/parsys'}"></div>
+       </div>    
+    </div>
+</section>
+
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.iconimageAltText}"></sly>
+

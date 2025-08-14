@@ -1,0 +1,118 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<div class="columncontrol-filter-background">
+    <img src="${properties.iconPath}" alt="${properties.altText}" class="desktop-image">
+    <img src="${properties.mobileBackground}" alt="${properties.mobileAltText}" class="mobile-image">
+
+    <div class="columncontrol-filter-tab">
+        <h2 class="mediahub-header">${properties.headerTitle}</h2>
+        <div class="filter-container">
+            <button class="filter-button" data-filter="all">
+                All: <span id="count-all">(0)</span>
+            </button>
+            <sly data-sly-list.parent="${resource.children}">
+                <sly data-sly-test="${parent.name == 'sectionOneBrandDetails'}">
+                    <sly data-sly-list.child="${parent.children}">
+                        <button class="filter-button" data-filter="${child.type}">
+                            <img src="${child.imagePath}" alt="${child.altImageText}" class="filter-tab-icon">
+                            <div class="filter-div">${child.articleName} <span id="count-${child.type}">(0)</span></div>
+                        </button>
+                    </sly>
+                </sly>
+            </sly>
+        </div>
+    </div>
+</div>
+
+
+<div class="section-background">
+    <div class="mediafilter-container">
+        <div class="loadmorecontainer">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <sly
+                    data-sly-use.model="${'com.hdfclife.path2prospermicrosite.core.models.HDFCPillarModel' @ fetchLatestOnly=false, parentPath=properties.parentArticlePath}">
+                    <sly data-sly-list.pages="${model.childPages}">
+                        <div class="mb-4 card-item"
+                            data-type="${pages.articletype == 'article' ? 'article' : pages.articletype}">
+                            <div class="card">
+                                <a href="${pages.redirectPath @context='uri'}.html" target="_self">
+                                    <img src="${pages.mobileBackgroundImagePath}" alt="blogs-image" class="image">
+                                </a>
+                                <div class="card-content">
+                                    <div class="meta">
+                                        <div class="blog-meta">
+                                            <div>
+                                                <img src="${pages.bannerIcon}" alt="blogs-icon" />
+                                            </div>
+                                            <div class="type-readtime">
+                                                <span class="type"><span
+                                                        class="poppins-bold text-capitalize m-0">${pages.articletype}
+                                                        ${pages.readtime ? '•' :
+                                                        ''}</span><i>${pages.readtime}</i></span>
+                                            </div>
+                                        </div>
+                                        <div class="date-info">
+                                            <div class="date">
+                                                <img src="/etc.clientlibs/hdfclifepath2prospermicrosite/clientlibs/clientlib-microsite/resources/images/listing-clockicon.svg"
+                                                    alt="clock-img" />
+                                                <span><span
+                                                        class="poppins-bold text-capitalize m-0">${pages.publishedDate}</span>
+                                                    <span>,${pages.publishedYear}</span></span>
+                                            </div>
+                                        </div>
+                                        <div class="share-section">
+                                            <div class="share-icon" onclick="togglePopup(this)">
+                                                <img src="${properties.shareIcon}" alt="${properties.altShare}" />
+                                            </div>
+                                            <div class="share-popup">
+                                                <div class="twitterlogo">
+                                                    <a class="socialMediaLinks" href="https://twitter.com/intent/tweet?text="
+                                                        target="_blank" data-target-link="${pages.redirectPath @context='uri'}.html">
+                                                        <img src="${properties.mediaTwitter}"
+                                                            alt="${properties.altTwitter}" />
+                                                    </a>
+                                                </div>
+                                                <div class="facebooklogo">
+                                                    <a class="socialMediaLinks"
+                                                        href="https://www.facebook.com/sharer/sharer.php?u="
+                                                        target="_blank" data-target-link="${pages.redirectPath @context='uri'}.html">
+                                                        <img src="${properties.mediaFacebook}"
+                                                            alt="${properties.altFacebook}" />
+                                                    </a>
+                                                </div>
+                                                <div class="linkedinlogo">
+                                                    <a class="socialMediaLinks"
+                                                        href="https://www.linkedin.com/sharing/share-offsite/?url="
+                                                        target="_blank" data-target-link="${pages.redirectPath @context='uri'}.html">
+                                                        <img src="${properties.mediaLinkedin}"
+                                                            alt="${properties.altLinkedin}" />
+                                                    </a>
+                                                </div>
+                                                <div class="whatsapplogo">
+                                                    <a class="socialMediaLinks" href="https://wa.me/?text="
+                                                        target="_blank" data-target-link="${pages.redirectPath @context='uri'}.html">
+                                                        <img src="${properties.mediaWhatsapp}"
+                                                            alt="${properties.altWhatsapp}" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="media-title-description">
+                                        <a href="${pages.redirectPath @context='uri'}.html" class="title">
+                                            <div style="padding: 0px;">${pages.articleheading}</div>
+                                            <div style="padding: 0px;">${pages.articledesc}</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </sly>
+                </sly>
+            </div>
+        </div>
+        <div class="text-center">
+            <button id="loadMore" class="buttonloadmore">Load More</button>
+        </div>
+    </div>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !sectionOne.blogImage}"></sly>
